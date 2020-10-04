@@ -6,6 +6,8 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<!--
+/*
 <div id="wrapper" class="hfeed">
 <header id="header">
 <div id="branding">
@@ -22,3 +24,5 @@
 </nav>
 </header>
 <div id="container">
+*/
+-->
