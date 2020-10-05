@@ -1,0 +1,23 @@
+{
+  "name": "clean-slate",
+  "version": "0.0.1",
+  "description": "A Clean Wordpress theme with no overhead.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gallantd/clean-slate"
+  },
+  "author": {
+    "name": "Dave Gallant",
+    "email": "dave.a.gallant@gmail.com",
+    "url": ""
+  },
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~1.0.4",
+    "grunt-contrib-uglify": "~4.0.1",
+    "grunt-contrib-watch": "~1.1.0",
+    "grunt-sass": "2.1.0",
+    "jquery": "2.2.4",
+    "lazysizes": "^4.1.4"
+  }
+}
