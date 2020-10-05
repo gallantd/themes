@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Clean Slate
 Theme URI: https://github.com/gallantd/clean-slate.git
@@ -12,9 +11,11 @@ Text Domain: cleanslate
 
 Clean Slate WordPress Theme © 2020 Dave Gallant
 */
+
 body {
   width: 1600px;
   height: 900px;
   margin: 0 auto;
   display: block;
-  background: lightcoral; }
+  background: lightcoral;
+}
