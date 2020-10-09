@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'build/style',
+                    cwd: 'build/style/',
                     src: ['*.scss'],
                     dest: 'build/',
                     ext: '.css'
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
                 },
             },
             css: {
-                files: 'build/style/**/*.scss',
+                files: 'build/style/*.scss',
                 tasks: ['sass', 'cssmin', 'clean'],
                 options: {
                     livereload: true,
