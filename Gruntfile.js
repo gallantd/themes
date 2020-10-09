@@ -1,67 +1,80 @@
-'use strict';
 module.exports = function(grunt) {
-
+    require('load-grunt-tasks')(grunt);
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         sass: {
+            options: {
+                implementation: 'sass',
+                style: 'minify'
+            },
             dist: {
-                options: {
-                    style: 'compressed',
-                    compass: false,
-                    sourcemap: false
-                },
+                files: [{
+                    expand: true,
+                    cwd: 'build/style',
+                    src: ['*.scss'],
+                    dest: 'build/',
+                    ext: '.css'
+                }]
+            }
+        },
+        cssmin: {
+            options: {
+                mergeIntoShorthands: false,
+                roundingPrecision: -1
+            },
+            target: {
                 files: {
-                    'style.css': [
-                        'build/style/style.scss'
-                    ]
+                    'style.css': ['build/*.css']
                 }
+              }
+            },
+        concat: {
+            dist: {
+                src: [
+                    'build/js/*.js'
+                ],
+                dest: 'build/script.js',
             }
         },
         uglify: {
-            dist: {
-                files: {
-                    'script.js': [
-                        'build/js/script.js'
-                    ]
-                }
+            build: {
+                src: 'build/script.js',
+                dest: 'script.js'
             }
         },
         watch: {
             options: {
                 livereload: true
             },
-            sass: {
-                files: [
-                    'build/style/*.scss'
-                ],
-                tasks: ['sass']
+            scripts: {
+                files: 'build/js/*.js',
+                tasks: ['jshint', 'concat', 'uglify', 'clean'],
+                options: {
+                    debounceDelay: 250,
+                },
             },
-            js: {
-                files: [
-                    'build/js/*.js'
-                ],
-                tasks: ['uglify']
+            css: {
+                files: 'build/style/**/*.scss',
+                tasks: ['sass', 'cssmin', 'clean'],
+                options: {
+                    livereload: true,
+                },
             }
+        },
+        jshint: {
+            all: {
+                src: ['build/js/*.js'],
+            },
         },
         clean: {
             dist: [
-                'build/style/style.min.css',
-                'build/js/script.min.js'
+                'build/*.css',
+                'build/script.js'
             ]
         }
     });
 
-    // Load tasks
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-sass');
-
-    // Register tasks
-    grunt.registerTask('build', [
-        'sass',
-        'uglify'
-    ]);
-    grunt.registerTask('dev', [
-        'watch'
-    ]);
+    grunt.registerTask('default', ['concat', 'sass', 'cssmin','uglify']);
+    grunt.registerTask('dev', ['clean', 'watch']);
 
 };
