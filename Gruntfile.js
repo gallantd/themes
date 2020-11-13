@@ -54,7 +54,7 @@ module.exports = function(grunt) {
                 },
             },
             css: {
-                files: 'build/style/*.scss',
+                files: 'build/style/**/*.scss',
                 tasks: ['sass', 'cssmin', 'clean'],
                 options: {
                     livereload: true,
@@ -75,6 +75,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['concat', 'sass', 'cssmin','uglify']);
-    grunt.registerTask('dev', ['clean', 'watch']);
+   grunt.registerTask('dev', ['clean', 'watch']);
 
 };
