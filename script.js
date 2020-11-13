@@ -1,1 +1,1 @@
-console.log("cat's suck"),console.log("this is a dog hiding");
+var anchorListener=function(){console.log("anchor")};anchorListener();
