@@ -22,7 +22,6 @@
 </div>
 </article>
 
-<?php if ( comments_open() && ! post_password_required() ) { comments_template( '', true ); } ?>
 <?php endwhile; endif; ?>
 
 </main>

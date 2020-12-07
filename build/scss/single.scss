@@ -1,0 +1,14 @@
+.single--race {
+  width: 100%;
+  position: relative;
+  &-article {
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  &-post {
+    margin: 32px auto;
+    font-size: 16px;
+  }
+}

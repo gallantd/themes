@@ -1,10 +1,7 @@
 <?php get_header(); ?>
-<main id="content">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php comments_template(); ?>
-<?php endwhile; endif; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-</main>
-<?php get_sidebar(); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="header">
+        <h2 class="entry-title"><?php the_title(); ?></h2>
+    </div>
+        <?php endwhile; endif; ?>
 <?php get_footer(); ?>

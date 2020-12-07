@@ -1,0 +1,42 @@
+.race--details {
+  background-color: $grey-rgba;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+  @media only screen and (min-width: 768px) {
+    margin: 24px auto;
+  }
+  @media only screen and (min-width: 1024px) {
+    margin: 32px auto;
+  }
+  &--show, &--show-more {
+    padding: 20px;
+    @media only screen and (min-width: 768px) {
+      padding: 24px;
+    }
+    @media only screen and (min-width: 1024px) {
+      padding: 32px;
+    }
+  }
+  &--btn, &--btn-less {
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &--btn-less {
+    display: none;
+  }
+  &--more {
+    min-height: 20px;
+  }
+  &--show-more {
+    height: 0;
+    opacity: 0;
+  }
+}

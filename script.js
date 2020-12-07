@@ -1,1 +1,0 @@
-var anchorListener=function(){console.log("anchor")};anchorListener();
