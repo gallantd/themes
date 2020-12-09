@@ -1,18 +1,33 @@
 .cancelled {
   position: fixed;
-  top: 25vw;
-  left: 20vw;
-  width: 60vw;
-  opacity: 0.6;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
   z-index: 10000;
+  @media only screen and (min-width: 768px) {
+    width: 75vw;
+    opacity: 0.6;
+    left: 12.5vw;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 50vw;
+    left: 25vw;
+  }
   &--header {
     color: $red;
-    border-radius: 30px;
-    border: 10px solid $red;
-    padding: 60px;
-    font-size: 90px;
+    border-radius: 10px;
+    border: 3px solid $red;
+    padding: 25px;
+    font-size: 32px;
+    margin-top: 20vh;
     transform: rotate(45deg);
     text-align: center;
     text-transform: uppercase;
+    @media only screen and (min-width: 768px) {
+      padding: 60px;
+      font-size: 75px;
+      border: 10px solid $red;
+      margin-top: 30vh;
+    }
   }
 }

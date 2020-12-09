@@ -9,12 +9,14 @@
         <div class="race--details--show-more">
             <?php if(!empty($race['rd'])){        echo "Race Director: {$race['rd']}<br>";} ?>
 
+            <?php if(!empty($race['city'])){      echo "City: {$race['city']}<br>";} ?>
+
             <?php if(!empty($race['prov'])){      echo "Province: {$race['prov']}<br>";} ?>
 
             <?php if(!empty($race['elev'])){      echo "Elevation: {$race['elev']}<br> meters";} ?>
         </div>
     </div>
-    <button class="irc-btn <?= $btn;?> race--details--btn" id="show-more">see more </button>
-    <button class="irc-btn <?= $btn;?> race--details--btn-less" id="show-less">hide details </button>
+    <a class="irc-btn <?= $btn;?> race--details--btn" id="show-more">see more </a>
+    <a class="irc-btn <?= $btn;?> race--details--btn-less" id="show-less">hide details </a>
 </section>
 

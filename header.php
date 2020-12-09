@@ -9,9 +9,6 @@
 </head>
 <body <?php body_class(); ?>>
     <div class="wrapper" >
-      <!--  <nav id="menu">
-            <?php //wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-        </nav> -->
-
-
-
+        <nav id="menu">
+            <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+        </nav>
