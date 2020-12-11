@@ -1,3 +1,9 @@
+//## Sans Serif
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+$sans: 'Quicksand', sans-serif;
+//## Serif
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+$serif: 'Balsamiq Sans', cursive;
 //## Firebrick RED
 $red: #B22222;
 //## Eerie Black
@@ -11,16 +17,21 @@ $grey-rgba: rgba(205,205,205, 0.2);
 $lightBlue: #ACC8E5;
 //## Background
 $white: #f1f3f4;
+$whitefilter: invert(89%) sepia(2%) saturate(117%) hue-rotate(155deg) brightness(108%) contrast(96%);
 
 
 
 body {
-  background-color: $white;
-  color: $dark;
+  background: url("http://localhost:8888/irc/wp-content/themes/clean-slate/img/mountains.jpg") no-repeat 100%/100% fixed;
+  color: $white;
+  font-family: $sans;
   font-size: 12px;
   margin: 0;
+  padding: 0;
   line-height: 100%;
   letter-spacing: 0.02em;
+  height: 100%;
+  width: 100%;
   @media only screen and (min-width: 768px) {
     font-size: 14px;
   }
@@ -29,11 +40,20 @@ body {
   }
 }
 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(0,0,0, 0.83);
+  padding-top: 60px;
+}
 h1 {
   font-size: 25px;
   font-weight: bold;
+  font-family: $serif;
   letter-spacing: 0.02em;
   line-height: 100%;
+
   @media only screen and (min-width: 768px) {
     font-size: 35px;
   }
@@ -42,13 +62,14 @@ h1 {
   }
 }
 h2 {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
+  font-family: $serif;
   @media only screen and (min-width: 768px) {
     font-size: 18px;
   }
   @media only screen and (min-width: 1024px) {
-    font-size: 24px;
+    font-size: 25px;
   }
 }
 h3 {

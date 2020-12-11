@@ -44,3 +44,16 @@
     text-align: center;
   }
 }
+.blog{
+  .jumbotron--img {
+    &.default {
+      height: 400px;
+      display: block;
+    }
+  }
+}
+.home {
+  .jumbotron--large {
+    margin-bottom: 0;
+  }
+}

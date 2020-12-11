@@ -6,9 +6,12 @@
     text-align: left;
     margin: 0 auto;
     padding: 24px;
+    background-color: $grey-rgba;
   }
   &-post {
     margin: 32px auto;
     font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.03em;
   }
 }
