@@ -1,14 +1,15 @@
 .ticker {
   width: 100%;
-  padding: 30px;
-  font-size: 32px;
+  font-size: 3.2rem;
   text-transform: uppercase;
   text-align: center;
   background-color: $grey-rgba;
   &--value {
     display: inline-block;
-    padding: 10px;
-    margin: 0 25px;
+    padding: 2rem 3.5rem;
     cursor: pointer;
+    &:hover {
+      background-color: $grey-hover;
+    }
   }
 }

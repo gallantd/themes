@@ -14,19 +14,19 @@
   }
   &--header {
     color: $red;
-    border-radius: 10px;
-    border: 3px solid $red;
-    padding: 25px;
-    font-size: 32px;
+    border-radius: 1rem;
+    border: 0.3rem solid $red;
+    padding: 2.5rem;
+    font-size: 3.2rem;
     font-weight: bold;
     margin-top: 20vh;
     transform: rotate(45deg);
     text-align: center;
     text-transform: uppercase;
     @media only screen and (min-width: 768px) {
-      padding: 60px;
-      font-size: 75px;
-      border: 10px solid $red;
+      padding: 6rem;
+      font-size: 7.5rem;
+      border: 1rem solid $red;
       margin-top: 30vh;
     }
   }

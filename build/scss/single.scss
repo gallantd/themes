@@ -2,15 +2,14 @@
   width: 100%;
   position: relative;
   &-article {
-    max-width: 800px;
+    max-width: 80rem;
     text-align: left;
     margin: 0 auto;
-    padding: 24px;
+    padding: 2.4rem;
     background-color: $grey-rgba;
   }
   &-post {
-    margin: 32px auto;
-    font-size: 16px;
+    margin: 3.2rem auto;
     line-height: 140%;
     letter-spacing: 0.03em;
   }
