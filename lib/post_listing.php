@@ -108,8 +108,8 @@ class AllPosts
             'base' => add_query_arg('paged', '%#%'),
             'format' => '?paged=%#%',
             'current' => max(1, $this->getPaged()),
-            'prev_text' => __(' <img class="icon-arrow icon-arrow-prev" aria-hidden="true" alt="Previous Page" src="/content/themes/base/img/icons/arrow-text-link.svg"><span class="sr-only">Previous</span>'),
-            'next_text' => __(' <img class="icon-arrow icon-arrow-next" aria-hidden="true" alt="Next Page" src="/content/themes/base/img/icons/arrow-text-link.svg"><span class="sr-only">Next</span>'),
+            'prev_text' => __(' <img class="icon-arrow icon-arrow-prev" aria-hidden="true" alt="Previous Page" src="http://localhost:8888/irc/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Previous</span>'),
+            'next_text' => __(' <img class="icon-arrow icon-arrow-next" aria-hidden="true" alt="Next Page" src="http://localhost:8888/irc/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Next</span>'),
             'show_all' => false,
             'mid_size' => 3,
             'type' => 'array'

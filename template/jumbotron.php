@@ -6,18 +6,14 @@
                 'alt'=> 'I Run Canada',
                 'title'=> 'I Run Canada',
                 'class'=> 'default'));
+
+        echo '<h1 class="jumbotron--title">I Run Canada</h1>';
     }
-    echo '<h1 class="jumbotron--title">I Run Canada</h1>';
     ?>
 
 
     <?php
-    if(!empty($race)){
-//       $foo =  set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) );
-//        print_r($foo);
-        if(!empty($race['img'])){ echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ), 'staggered--images-main', 0);};
-
-       // printImg($race['img']); ?>
+    if(!empty($race)){if(!empty($race['img'])){ echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ), 'staggered--images-main', 0);}; ?>
         <h1 class="jumbotron--title"><?php the_title(); ?></h1>
         <?php if(!empty($race['regLink']['url'])):
             $btn = (!empty($race['regCol']))? " irc-btn-{$race['regCol']}":" irc-btn-green";
