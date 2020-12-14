@@ -101,7 +101,8 @@ if(!function_exists('output_pictures')){
 if(!function_exists('displayTicker')){
     function displayTicker($values){
         if(empty($values)){ return false; } ?>
-        <section class="ticker">
+            <?php $count = count($values); ?>
+        <section class="ticker ticker--<?= $count;?>">
             <?php foreach ($values as $value){?>
                 <h2 class="ticker--value"><?= $value; ?></h2>
             <?php }// end foreach?>

@@ -7,10 +7,20 @@
   background-color: $grey-rgba;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: start;
+  @media only screen and (min-width: 2240px) {
+    justify-content: center;
+  }
+  &--10 {
+    @media only screen and (min-width: 1660px ) {
+      justify-content: center;
+    }
+  }
   &--value {
     text-align: center;
     padding: 2rem 3.5rem;
     cursor: pointer;
+    min-width: 100px;
     &:hover {
       background-color: $grey-hover;
     }

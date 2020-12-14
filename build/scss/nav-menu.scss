@@ -9,12 +9,12 @@
   color: $white;
   &.desktop {
     display: none;
-    @media only screen and (min-width: 1900px) {
+    @media only screen and (min-width: 768px) {
       display: block;
     }
   }
   &.mobile {
-    @media only screen and (min-width: 1900px) {
+    @media only screen and (min-width: 768px) {
       display: none;
     }
   }
