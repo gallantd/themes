@@ -2,8 +2,9 @@
 /***************************************************************
  * PHP INCLUDES
  ***************************************************************/
-require_once "lib/image_output.php";
-require_once "lib/post_listing.php";
+require_once locate_template("lib/image_output.php");
+require_once locate_template("lib/AdvnacedSearch.php");
+require_once locate_template("lib/post_listing.php");
 
 
 add_action('wp_head', function(){
@@ -54,5 +55,35 @@ if(!function_exists('printImg')) {
             </picture>
         <?php print(ob_get_clean());
 
+    }
+}
+
+
+
+if (!function_exists('futureDate')) {
+    /**
+     * @param $start = strtotime(get_field('start_date'))
+     * @param $end = strtotime(get_field('end_date'))
+     * @return true || false
+     */
+
+    function futureDate($start, $end)
+    {
+        $future = true;
+
+        if(!$start){$future = false;}
+        if(!$end){ $end = $start;}
+
+        $today = date("m/d");
+        $cYear = date("Y");
+        $eYear = date("Y", $end);
+        $end_date = date("m/d", $end);
+
+        if(  $eYear <= $cYear ){
+            if($end_date < $today ){
+                $future = false;
+            }
+        }
+        return $future;
     }
 }
