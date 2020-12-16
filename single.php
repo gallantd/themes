@@ -9,14 +9,15 @@
 
  <section class="single--race">
     <article id="post-<?php the_ID();?>" class="single--race-article">
+        <div class="header">
+            <h2 class="entry-title"><?php the_title(); ?></h2>
+        </div>
         <?php
         if(locate_template('template/race-details.php') && !empty($race['dist']) ||
             locate_template('template/race-details.php') && !empty($race['cost']) ||
             locate_template('template/race-details.php') && !empty($race['date'])
         ){ include( 'template/race-details.php' );} ?>
-        <div class="header">
-            <h2 class="entry-title"><?php the_title(); ?></h2>
-        </div>
+
         <aside class="single--race-post">
             <?php the_content(); ?>
         </aside>

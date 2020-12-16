@@ -17,7 +17,9 @@ foreach ($posts as $key => $post) :?>
         if($x%2 == 0){ ?>
             <section class="race race--even">
                 <?php
-                 if(!empty($race['img'])){ echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ));};
+                 if(!empty($race['img'])){
+                     echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ));
+                 }
                 ?>
                 <aside class="race-container">
                     <?php if(!empty($race['cancelled'])){include(  'template/cancelled.php');} ?>
@@ -32,7 +34,9 @@ foreach ($posts as $key => $post) :?>
                     <?php if(locate_template('template/race-info.php')){ include('template/race-info.php');} ?>
                 </aside>
                 <?php
-                    if(!empty($race['img'])){ echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ));};
+                    if(!empty($race['img'])){
+                        echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ));
+                    }
                 ?>
                 <aside class="race-container mobile">
                     <?php if(!empty($race['cancelled'])){include(  'template/cancelled.php');} ?>

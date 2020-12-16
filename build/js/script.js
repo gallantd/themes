@@ -18,8 +18,9 @@ function showMore(){
         $(this).hide();
        $('#show-less').fadeIn(250);
        $('.race--details--show-more').animate({
-           height: '60px',
-           opacity: 1
+           height: '6rem',
+           opacity: 1,
+           paddingBottom: '12rem'
        }, 250);
     });
 
@@ -28,8 +29,8 @@ function showMore(){
         $('#show-more').fadeIn(250);
         $('.race--details--show-more').animate({
             opacity: 0,
-            height: '0px'
-
+            height: 0,
+            paddingBottom: 0
         }, 250);
     });
 
@@ -45,7 +46,7 @@ function mobileMenu() {
         if (_this.hasClass('menu-open')) {
             _this.removeClass('menu-open');
             _menu.animate({
-                right: '-305px',
+                right: '-30.5rem',
             }, 250);
         } else {
             _this.addClass('menu-open');
