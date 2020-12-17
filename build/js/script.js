@@ -18,9 +18,9 @@ function showMore(){
         $(this).hide();
        $('#show-less').fadeIn(250);
        $('.race--details--show-more').animate({
-           height: '6rem',
+           height: '100%',
            opacity: 1,
-           paddingBottom: '12rem'
+           paddingBottom: '2rem'
        }, 250);
     });
 
