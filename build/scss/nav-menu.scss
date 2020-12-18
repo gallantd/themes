@@ -6,6 +6,7 @@
   position: fixed;
   margin: 0 auto;
   z-index: 100;
+  top: 0;
   color: $white;
   &.desktop {
     display: none;
@@ -101,13 +102,13 @@
   &.mobile {
     .mobile-menu {
       background: rgba(0, 0, 0, 0.8);
-      width: 300px;
+      width: 30rem;
       font-size: 2rem;
       position: absolute;
-      right: -305px;
+      right: -30.5rem;
     }
     .page_item {
-      padding: 20px;
+      padding: 2rem 1.5rem;
       text-align: center;
       width: 100%;
       font-size: 2rem;

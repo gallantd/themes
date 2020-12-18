@@ -80,13 +80,13 @@ if(!function_exists('set_image_array')) {
  *  */
 if(!function_exists('output_pictures')){
 
-    function output_pictures ($imageArray, $class='', $percentage = '50'){
+    function output_pictures ($imageArray, $class=''){
 
         if(!$imageArray){return false;}
         $imgPos = 1;
         foreach($imageArray as $key => $value){
             $prtClass = (!empty($class))? $class:'pic';?>
-            <picture class="cover-picture <?= $prtClass; ?> <?= "${prtClass}-{$imgPos}"; ?>" style="margin-left: <?php echo $percentage; ?>%">
+            <picture class="<?= $prtClass; ?> <?= "${prtClass}-{$imgPos}"; ?>">
                 <?php
                 //foreach ($value['srcset'] as $size => $source) {?>
                 <!--  <source media="(min-width:<?php //echo $size; ?>px)" srcset="<?php //echo $source; ?>">
@@ -96,8 +96,7 @@ if(!function_exists('output_pictures')){
                      alt="<?= $value['alt'];?>"
                      class="lazyload <?= $value['imgClass']; ?>"
                      title="<?= $value['title']?>"
-                     draggable="false"
-                     style="transform: translateX(-<?php echo $percentage; ?>%);">
+                     draggable="false">
             </picture>
             <?php
             $imgPos++;

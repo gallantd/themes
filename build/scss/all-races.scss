@@ -1,91 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
 .race {
   width: 90vw;
-  max-width: 140rem;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  @media only screen and (min-width:768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media only screen and (min-width:1024px) {
-    grid-template-columns: repeat(4, 1fr);
-    height: 37.5rem;
-  }
-  grid-gap: 2rem;
+  max-width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 2rem 0;
   color: $white;
-  @media only screen and (min-width: 768px) {
-    grid-gap: 2.4rem;
-  }
-  @media only screen and (min-width: 1024px) {
-    grid-gap: 3.2rem;
-  }
-  picture {
-    height: 100%;
-    grid-column: span 1;
-    @media only screen and (min-width: 768px) {
-      grid-column: span 1;
-    }
-    @media only screen and (min-width: 1024px) {
-      grid-column: span 3;
-    }
-  }
-  &-container {
-    grid-column: span 1;
-    vertical-align: top;
+  &-container, picture {
+    flex: 100%;
     position: relative;
+    text-align: center;
+  }
 
+  picture {
+    height: 30rem;
+    object-fit: cover;
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
   .header {
     text-shadow: none;
     line-height: 130%;
-    text-align: right;
-  }
-  &--odd {
-    .race-container {
-      display: none;
-      &.mobile {
-        display: block;
-      }
-    }
-    @media only screen and (min-width: 768px) {
-      .race-container {
-        display: block;
-        &.mobile {
-          display: none;
-        }
-      }
-    }
-    .header {
-      text-align: left;
-    }
-  }
-  &--even {
-    text-align: right;
-    .race--info {
-      margin-right: 0;
-      margin-left: auto;
-    }
+    text-align: center;
   }
   &--info {
-    margin-bottom: 5rem;
-    width: 17rem;
+    margin-bottom: 3rem;
     line-height: 2.3rem;
     b {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
   .cancelled {
     position: absolute;
-    width: 30rem;
+    width: 20rem;
     height: 5rem;
-    left: 0;
-    top: 15rem;
+    left: 50%;
+    top: 50%;
     margin: 0;
     padding: 0;
     &--header {
-      margin: 0;
+      margin-left: -50%;
+      margin-top: -50%;
       padding: 1rem;
       font-size: 2.5rem;
       border: .5rem solid $red;
@@ -115,5 +79,42 @@
       }
     }
   }
+}
 
+@media only screen and (min-width: 768px){
+.race {
+    height: 37.5rem;
+    max-width: 140rem;
+    &-container {
+      flex: 33%;
+    }
+    picture {
+      flex: 66%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    &--odd {
+      .irc-cta{
+        margin-right: 0;
+      }
+      .header,
+      & .race--info {
+        text-align: right;
+      }
+    }
+    &--even {
+      flex-direction: row-reverse;
+      .irc-cta {
+        margin-left: 0;
+      }
+      .header,
+      & .race--info {
+        text-align: left;
+      }
+    }
+    .cancelled {
+      top: 70%;
+    }
+  }
 }

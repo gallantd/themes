@@ -8,7 +8,7 @@ class AllPosts
      * Set Post type default value
      */
     private $type = 'post';
-    private $postsPerPage = 11;
+    private $postsPerPage = 10;
 
     /**
      * Set Post type to be searched
@@ -139,4 +139,3 @@ class AllPosts
         return $this->paged;
     }
 }
-
