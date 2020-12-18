@@ -5,7 +5,6 @@
 
 require_once locate_template("lib/race_event_info.php");
 require_once locate_template("lib/image_output.php");
-require_once locate_template("lib/AdvnacedSearch.php");
 require_once locate_template("lib/post_listing.php");
 
 
@@ -25,18 +24,14 @@ if(!function_exists('promoRaceEvent')){
     }
 }
 
-if(!function_exists('printImg')) {
-    function printImg($ig) {
-        if(!empty($ig['class'])){ $class = $ig['class'];}
-        ob_start(); ?>
-            <picture class="lazyload jumbotron--img <?= $class?>">
-                <?php //foreach ($sources as $key => $source): ?>
-            <!--                <source media="(min-width: --><?php //echo $key; ?><!--px)" data-srcset="--><?php //echo $source; ?><!--">-->
-            <!--            --><?php //endforeach; ?>
-                <img src="<?= $ig['url']?>" alt="<?= $ig['alt']?>" title="<?= $ig['alt']?>" >
-            </picture>
-        <?php print(ob_get_clean());
-
-    }
-}
-
+if(!function_exists('displayTicker')){
+   function displayTicker($values){
+       if(empty($values)){ return false; } ?>
+       <section class="ticker">
+           <?php foreach ($values as $value){?>
+               <div class="ticker--value"><?= $value; ?></div>
+           <?php }// end foreach?>
+       </section>
+<?php
+   }//end function
+}//end if

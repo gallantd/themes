@@ -1,5 +1,6 @@
 <header class="header jumbotron--large">
-    <?php if(empty($race) ){
+  LOAD JUMBOTRON
+    <?php if(empty($race) && 1==2){
 
         printImg(array(
                 'url'=>'http://localhost:8888/irc/wp-content/themes/clean-slate/img/mountains.jpg',
@@ -10,7 +11,7 @@
     }
     ?>
     <?php
-    if(!empty($race)){if(!empty($race['img'])){
+    if(!empty($race) && 1==2){if(!empty($race['img'])){
         echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ), 'staggered--images-main');}; ?>
         <h1 class="jumbotron--title"><?php the_title(); ?></h1>
         <?php if(!empty($race['regLink']['url'])):

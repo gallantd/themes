@@ -54,13 +54,12 @@ if(!function_exists('getAllDistance')) {
         $count = count($dist);
         $i = 0;
         $returnData = '';
-
         foreach ($dist as $val) {
             if($i == 0 && $count > 1){
                 $returnData = "<br>{$val['label']} ";
             }
             elseif ($i == 0 && $count == 1){
-                $returnData = "{$val['label']} ";
+                $returnData = $val['label'];
             }
             else {
                 $returnData .= "<b>|</b> {$val['label']} ";
