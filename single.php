@@ -6,7 +6,6 @@
 
     <?php if(locate_template('template/jumbotron.php') && !empty($race['img'])){ include( 'template/jumbotron.php' );} ?>
 
-
  <section class="single--race">
     <article id="post-<?php the_ID();?>" class="single--race-article">
         <div class="header">
@@ -21,9 +20,10 @@
         <aside class="single--race-post">
             <?php the_content(); ?>
         </aside>
+        <?php edit_post_link(); ?>
     </article>
     </section>
         <?php endwhile; endif; ?>
 
-<?php edit_post_link(); ?>
+
 <?php get_footer(); ?>

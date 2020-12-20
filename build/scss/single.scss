@@ -13,4 +13,25 @@
     line-height: 140%;
     letter-spacing: 0.03em;
   }
+  .post-edit-link {
+    padding: 1rem;
+    background-color: $green;
+    display: table;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $white;
+    font-family: $serif;
+    letter-spacing: 0.05em;
+    margin: 0 0 0 auto;
+    @media only screen and (min-width: 768px) {
+      padding: 1.2rem;
+    }
+    @media only screen and (min-width: 1024px) {
+      padding: 1.6rem;
+    }
+    &:hover {
+      background-color: $grey-hover;
+      color: $dark;
+    }
+  }
 }

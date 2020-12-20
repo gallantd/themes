@@ -11,17 +11,18 @@
     <nav class="nav desktop" id="menu">
         <a href="<?= get_home_url(); ?>"><i class="site-icon"></i></a>
         <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-        <button class="search"></button>
+        <button class="search"  id="search-icon"></button>
+        <?php if(locate_template('template/search-bar.php')){ include( 'template/search-bar.php' );} ?>
     </nav>
 
     <nav class="nav mobile" id="menu">
         <a href="<?= get_home_url(); ?>"><i class="site-icon"></i></a>
         <aside class="mobile-menu">
-
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
         </aside>
         <button class="menu-icon" id="menu-icon"></button>
-        <button class="search"></button>
+        <button class="search" id="search-icon"></button>
+        <?php if(locate_template('template/search-bar.php')){ include( 'template/search-bar.php' );} ?>
     </nav>
 
     <div class="wrapper" >

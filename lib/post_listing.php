@@ -29,16 +29,9 @@ class AllPosts
         $this->postsPerPage = $val;
     }
 
-    public function posts($type = 'post', $postPerPage = 11)
+    public function posts($type = 'post', $postPerPage = 10)
     {
-        $this->type = $type;
-        $this->postsPerPage = $postPerPage;
-        if ('post' == $type || 'career' == $type) {
-            $return_data = $this->runSearchQuery();
-        } else {
-            $return_data = $this->runDateRange();
-        }
-        return $return_data;
+        return $this->runSearchQuery();
     }
 
     private function runSearchQuery()
@@ -48,43 +41,25 @@ class AllPosts
             'post_type' => $this->type,
             'post_status' => 'publish',
             'posts_per_page' => $this->postsPerPage,
-            'paged' => $this->paged,
-            'order' => 'DESC',
-        ));
+            'meta_key' => 'event_date',
+            'meta_query' => array(
+                'relation' => "OR",
+                array(
+                    'key' => 'event_date',
+                    'value' => date('Ymd'),
+                    'compare' => '>=',
+                ),
+                array(
+                    'key' => 'event_date',
+                    'value' => '',
+                    'compare' => '=',
+                )
+            )
+          )
+        );
         return $this->wpQuery->posts;
     }
 
-    private function runDateRange()
-    {
-
-        $return_data = new WP_Query(array(
-                'post_type' => $this->type,
-                'post_status' => 'publish',
-                'posts_per_page' => -1,
-                'meta_key' => 'end_date',
-                'meta_query' => array(
-                    'relation' => "OR",
-                    array(
-                        'key' => 'end_date',
-                        'value' => date('Ymd'),
-                        'compare' => '>=',
-                    ),
-                    array(
-                        'key' => 'end_date',
-                        'value' => '',
-                        'compare' => '=',
-                    )
-                )
-            )
-        );
-
-        return $return_data->posts;
-    }
-
-    public function setReadMore($text, $char = 125)
-    {
-        return strlen($text) > 50 ? substr($text, 0, $char) . "..." : $text;
-    }
 
     /**
      * The value from the pages query string parameter

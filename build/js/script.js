@@ -1,6 +1,7 @@
 (function(){
     welcome();
     mobileMenu();
+    searchDisplay();
     showMore();
 })();
 
@@ -53,6 +54,25 @@ function mobileMenu() {
             _menu.animate({
                 right: '0',
             }, 250);
+        }
+    });
+}
+
+function searchDisplay() {
+    var _menubtn = $('.search');
+    _menubtn.click(function() {
+        let _this = $(this);
+        let _menu = $('.search-bar');
+        if (_this.hasClass('bar-open')) {
+            _this.removeClass('bar-open');
+            _menu.animate({
+                right: '-100%',
+            }, 300);
+        } else {
+            _this.addClass('bar-open');
+            _menu.animate({
+                right: '0',
+            }, 300);
         }
     });
 }

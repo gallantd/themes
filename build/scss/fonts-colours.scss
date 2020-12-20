@@ -95,7 +95,7 @@ h3 {
   text-transform: uppercase;
   text-decoration: none;
   color: $white;
-  font-family: "Arial Black", serif;
+  font-family: $serif;
   letter-spacing: 0.05em;
   @media only screen and (min-width: 768px) {
     padding: 1.2rem;
@@ -107,12 +107,14 @@ h3 {
     background-color: $red;
     &:hover {
       background-color: $grey-hover;
+      color: $white;
     }
   }
   &-green {
     background-color: $green;
     &:hover {
       background-color: $grey-hover;
+      color: $dark;
     }
   }
 }
