@@ -14,14 +14,16 @@ $totalPosts = count($posts);
     $x = 0;
 foreach ($posts as $key => $post) :?>
     <?php $race = getRaceEvent($post->ID);
+      $cancelled = (!empty($race['cancelled']))? 'cancelled-event' : '';
+
         $val = ($x%2 != 0)? 'even':'odd'; ?>
-            <section class="race race--<?= $val;?>">
+            <section class="race race--<?= $val;?> <?=$cancelled?>">
                 <?php
                  if(!empty($race['img'])){
                      echo  output_pictures( set_image_array( array('imageArray' => $race['img'], 'singleImage' => true) ));
                  }
                 ?>
-                <aside class="race-container">
+                <aside class="race-container ">
                     <?php if(!empty($race['cancelled'])){include(  'template/cancelled.php');} ?>
                     <?php if(locate_template('template/race-info.php')){ include('template/race-info.php');} ?>
                 </aside>

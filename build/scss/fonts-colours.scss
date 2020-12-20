@@ -6,6 +6,7 @@ $sans: 'Quicksand', sans-serif;
 $serif: 'Balsamiq Sans', cursive;
 //## Firebrick RED
 $red: #B22222;
+$red-hover: rgba(178, 34, 34, 0.7);
 //## Eerie Black
 $dark: #262626;
 //## Dark cyan
@@ -20,14 +21,9 @@ $lightBlue: #ACC8E5;
 $white: #f1f3f4;
 $whitefilter: invert(89%) sepia(2%) saturate(117%) hue-rotate(155deg) brightness(108%) contrast(96%);
 
-
 html {
   font-size: 10px;
 }
-
-
-
-
 
 body {
   background: url("http://localhost:8888/irc/wp-content/themes/clean-slate/img/mountains.jpg") no-repeat 100%/100% 100% fixed;
@@ -109,8 +105,14 @@ h3 {
   }
   &-red {
     background-color: $red;
+    &:hover {
+      background-color: $grey-hover;
+    }
   }
   &-green {
     background-color: $green;
+    &:hover {
+      background-color: $grey-hover;
+    }
   }
 }

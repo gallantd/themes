@@ -4,8 +4,8 @@
  ***************************************************************/
 
 require_once locate_template("lib/race_event_info.php");
-require_once locate_template("lib/image_output.php");
 require_once locate_template("lib/post_listing.php");
+require_once locate_template("lib/image_output.php");
 
 
 add_action('wp_head', function(){
@@ -26,8 +26,9 @@ if(!function_exists('promoRaceEvent')){
 
 if(!function_exists('displayTicker')){
    function displayTicker($values){
-       if(empty($values)){ return false; } ?>
-       <section class="ticker">
+       if(empty($values)){ return false; }
+       $count = count($values);?>
+       <section class="ticker ticker--<?= $count; ?>">
            <?php foreach ($values as $value){?>
                <div class="ticker--value"><?= $value; ?></div>
            <?php }// end foreach?>

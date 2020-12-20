@@ -31,3 +31,10 @@
     }
   }
 }
+
+.cancelled-event {
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}

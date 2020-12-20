@@ -6,19 +6,21 @@
   text-align: center;
   background-color: $grey-rgba;
   display: flex;
+  flex: 1;
+  line-height: 125%;
   flex-wrap: nowrap;
   justify-content: start;
   @media only screen and (min-width: 2240px) {
     justify-content: center;
   }
   &--10 {
-    @media only screen and (min-width: 1660px ) {
+    @media only screen and (min-width: 1460px ) {
       justify-content: center;
     }
   }
   &--value {
     text-align: center;
-    padding: 2rem 3.5rem;
+    padding: 2rem 0;
     cursor: pointer;
     min-width: 150px;
     &:hover {

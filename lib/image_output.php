@@ -12,9 +12,8 @@
  * */
 if(!function_exists('set_image_array')) {
 
-    function set_image_array(array $imageData, $imageOverride ='')
+    function set_image_array(array $imageData , $imageOverride ='')
     {
-
         if(empty($imageData['imageArray'])){return false;}
 
         $maxsize =( !empty( $imageData['maxSize'] ) )? $imageData['maxSize'] : 1920;
@@ -102,4 +101,20 @@ if(!function_exists('output_pictures')){
             $imgPos++;
         } // End Foreach
     } // end If
+}
+
+if(!function_exists('get_defaults')){
+  function get_defaults(){
+    return array(
+      0 => array(
+        'title' => 'I Run Canada',
+        'alt' => 'I Run Canada',
+        'default' => 'http://localhost:8888/irc/wp-content/themes/clean-slate/img/mountains.jpg',
+        'imgClass' => '',
+        'srcset' => array (
+          '0' => 'http://localhost:8888/irc/wp-content/themes/clean-slate/img/mountains.jpg'
+          )
+        )
+    );
+  }
 }
