@@ -1,11 +1,15 @@
 <?php /* Template Name: Listing Page */ ?>
 <?php get_header(); ?>
 <?php if(locate_template('template/jumbotron.php')){ include( 'template/jumbotron.php' );} ?>
-
 <?php
-$display = 10;
 $AllPosts = new AllPosts;
-$posts = $AllPosts->posts('post', $display);
+if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING)){
+  $posts = $AllPosts->filters();
+  displayTicker(get_field('province_filter', 40));
+} else {
+  $posts = $AllPosts->posts();
+}
+
 $pagination = $AllPosts->getPagination(); // Get pagination
 $totalPosts = count($posts);
 ?>

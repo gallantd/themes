@@ -8,7 +8,7 @@
    <section class="featured">
      <?php if(locate_template('template/featured-post.php')){ include( 'template/featured-post.php' );}?>
    </section>
-   <?php displayTicker(get_field('distance_filter'));?>
+   <?php displayTicker(get_field('distance_filter'), 'distance');?>
    <section class="featured second-featured">
      <?php if(locate_template('template/featured-post.php')){ include( 'template/featured-post.php' );}?>
    </section>

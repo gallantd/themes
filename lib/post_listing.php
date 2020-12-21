@@ -8,7 +8,7 @@ class AllPosts
      * Set Post type default value
      */
     private $type = 'post';
-    private $postsPerPage = 10;
+    private $postsPerPage = 2;
 
     /**
      * Set Post type to be searched
@@ -28,17 +28,73 @@ class AllPosts
         }
         $this->postsPerPage = $val;
     }
+    public function setFilterType($val)
+    {
+        if (!$val) {
+            return false;
+        }
+        $this->filterType = $val;
+    }
+    public function setFilterValue($val)
+    {
+        if (!$val) {
+            return false;
+        }
 
-    public function posts($type = 'post', $postPerPage = 10)
+        $this->filterValue = $val;
+    }
+
+    public function posts()
     {
         return $this->runSearchQuery();
     }
 
+    public function filters()
+    {
+
+      if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING)){
+        $this->setFilterType('province');
+        $this->setFilterValue(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING));
+      }
+        return $this->runProvinceQuery();
+    }
+
+    private function runProvinceQuery()
+    {
+      $this->paged = filter_input(INPUT_GET, 'paged', FILTER_SANITIZE_STRING);
+
+      $this->wpQuery = new WP_Query(array(
+          'post_type' => $this->type,
+          'paged'  => $this->paged,
+          'post_status' => 'publish',
+          'posts_per_page' => $this->postsPerPage,
+          'meta_key' => $this->filterType,
+          'meta_query' => array(
+            'relation' => "AND",
+              array(
+                  'key' => $this->filterType,
+                  'value' => $this->filterValue,
+                  'compare' => '=',
+              ),
+              array(
+                  'key' => 'event_date',
+                  'value' => date('Ymd'),
+                  'compare' => '>=',
+              )
+          )
+        )
+      );
+        return $this->wpQuery->posts;
+    }
+
+
     private function runSearchQuery()
     {
         $this->paged = filter_input(INPUT_GET, 'paged', FILTER_SANITIZE_STRING);
+
         $this->wpQuery = new WP_Query(array(
             'post_type' => $this->type,
+            'paged'  => $this->paged,
             'post_status' => 'publish',
             'posts_per_page' => $this->postsPerPage,
             'meta_key' => 'event_date',

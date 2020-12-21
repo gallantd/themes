@@ -24,7 +24,8 @@
             <?php endif ?>
             <?php if(!empty($race['allDist'])):?>
                 <div class="race--details--info"><b>All Distances:</b> <?=$race['allDist'];?></div>
-            <?php endif ?><?php if(!empty($race['elev'])):?>
+            <?php endif ?>
+            <?php if(!empty($race['elev'])):?>
                 <div class="race--details--info"><b>Elevation:</b> <?=$race['elev'];?> meters</div>
             <?php endif ?>
             <?php if(!empty($race['site'])):?>

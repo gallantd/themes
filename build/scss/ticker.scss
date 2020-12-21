@@ -23,8 +23,11 @@
     padding: 2rem 0;
     cursor: pointer;
     min-width: 150px;
+    color: $white;
+    text-decoration: none;
     &:hover {
       background-color: $grey-hover;
+      text-decoration: underline;
     }
   }
 }

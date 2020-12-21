@@ -10,6 +10,7 @@ if(!function_exists('getRaceEvent')) {
             'rd' => get_field('race_director', $id),
             'prov' => getProvince(get_field('province', $id)),
             'city' => get_field('city', $id),
+            'address' => getAddress(get_field('province', $id), get_field('city', $id) ),
             'dist' => getDistance(get_field('distance', $id)),
             'allDist' => getAllDistance(get_field('distance', $id)),
             'elev' => get_field('elevation', $id),
@@ -22,6 +23,12 @@ if(!function_exists('getRaceEvent')) {
             'past' => futureDate(get_field('event_date', $id))
         );
     }
+}
+
+if(!function_exists('getAddress')){
+  function getAddress($prov, $city){
+    return "{$city}, {$prov['label']}";
+  }
 }
 
 if(!function_exists('getProvince')) {
@@ -77,8 +84,6 @@ if(!function_exists('getSite')) {
 
     }
 }
-
-
 
 if (!function_exists('futureDate')) {
     /**

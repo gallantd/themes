@@ -3,15 +3,13 @@
     max-width: 220rem;
     height: 10rem;
     overflow: hidden;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
     display: block;
     position: relative;
     @media only screen and (min-width: 768px) {
-      margin-bottom: 2.4rem;
       height: 15rem;
     }
     @media only screen and (min-width: 1024px) {
-      margin-bottom: 3.2rem;
       height: 20rem;
     }
   &--title {

@@ -45,7 +45,7 @@
       text-decoration: underline;
     }
   }
-  .menu {
+  .menu-trail-container {
     width: auto;
     display: inline-block;
     margin-right: 7rem;
@@ -54,17 +54,14 @@
     ul {
       list-style-type: none;
       text-align: right;
+      margin: 0;
     }
   }
-  li.page_item {
-    &.current_page_item {
-      a {
-        color: $green;
-        &:hover, &:focus {
-          text-decoration: none;
-          cursor: default;
-        }
-      }
+  li.menu-item {
+    display: inline-block;
+    padding: 2.2rem;
+    &:hover {
+      background: $grey-hover;
     }
     &.current_page_item {
       a {
@@ -93,13 +90,15 @@
       outline: none;
     }
   }
-  &.desktop {
-    li.page_item {
-      display: inline-block;
-      margin: 1rem 2rem;
-    }
-  }
   &.mobile {
+    .menu-trail-container {
+      width: 100%;
+      display: block;
+      margin: 0;
+      ul {
+        -webkit-padding-start: 0;
+      }
+    }
     .mobile-menu {
       background: rgba(0, 0, 0, 0.8);
       width: 30rem;
@@ -107,13 +106,14 @@
       position: absolute;
       right: -30.5rem;
     }
-    .page_item {
-      padding: 2rem 1.5rem;
+
+    li.menu-item {
       text-align: center;
       width: 100%;
+      display: block;
       font-size: 2rem;
       a {
-        padding: 1.5rem;
+        padding: 2rem;
       }
     }
     .menu-icon {

@@ -12,9 +12,6 @@ function welcome(){
 function showMore(){
     let more = $('#show-more');
     let less = $('#show-less');
-
-
-
     more.click(function(){
         $(this).hide();
        $('#show-less').fadeIn(250);
@@ -34,9 +31,6 @@ function showMore(){
             paddingBottom: 0
         }, 250);
     });
-
-
-
 }
 
 function mobileMenu() {
@@ -59,7 +53,7 @@ function mobileMenu() {
 }
 
 function searchDisplay() {
-    var _menubtn = $('.search');
+    var _menubtn = $('.search-icon');
     _menubtn.click(function() {
         let _this = $(this);
         let _menu = $('.search-bar');

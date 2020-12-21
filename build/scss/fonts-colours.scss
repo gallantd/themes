@@ -36,6 +36,8 @@ body {
   letter-spacing: 0.02em;
   height: 100%;
   width: 100%;
+  position: relative;
+  overflow-x: hidden;
   @media only screen and (min-width: 768px) {
     font-size: 1.4rem;
   }
@@ -49,7 +51,6 @@ body {
   height: 100%;
   display: block;
   background: rgba(0,0,0, 0.83);
-  padding-top: 6rem;
 }
 h1 {
   font-size: 2.5rem;
