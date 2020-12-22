@@ -25,12 +25,15 @@ if(!function_exists('promoRaceEvent')){
 }
 
 if(!function_exists('displayTicker')){
-   function displayTicker($values, $type = 'province'){
+   function displayTicker($values, $type = ''){
        if(empty($values)){ return false; }
        $count = count($values);?>
        <section class="ticker ticker--<?= $count; ?>">
-           <?php foreach ($values as $value){?>
-               <a href="http://localhost:8888/irc/race-list?<?= $type; ?>=<?= $value; ?>" class="ticker--value"><?= $value; ?></a>
+           <?php foreach ($values as $value){
+            $label = (!empty($value['label']))?$value['label'] : $value;
+            $val = (!empty($value['value']))?$value['value'] : $value;
+?>
+               <a href="<?php get_site_url();?>/irc/race-list?<?= $type; ?>=<?= $val; ?>" class="ticker--value"><?= $label; ?></a>
            <?php }// end foreach?>
        </section>
 <?php

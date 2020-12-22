@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 
 <?php if(locate_template('template/jumbotron.php')){ include( 'template/jumbotron.php' );} ?>
-<?php displayTicker(get_field('province_filter')); ?>
+<?php displayTicker(get_field('province_filter'), 'province'); ?>
    <section class="featured">
      <?php if(locate_template('template/featured-post.php')){ include( 'template/featured-post.php' );}?>
    </section>

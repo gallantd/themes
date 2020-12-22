@@ -3,7 +3,7 @@
 <?php if(locate_template('template/jumbotron.php')){ include( 'template/jumbotron.php' );} ?>
 <?php
 $AllPosts = new AllPosts;
-if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING)){
+if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING) || filter_input(INPUT_GET, 'distance', FILTER_SANITIZE_STRING)){
   $posts = $AllPosts->filters();
   displayTicker(get_field('province_filter', 40));
 } else {
@@ -59,5 +59,9 @@ if (!empty($pagination)): ?>
     </nav>
 <?php endif; ?>
 
-
+<?php if(empty($posts) && locate_template('template/no-results.php')){ include('template/no-results.php');} ?>
+<?php
+if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING) || filter_input(INPUT_GET, 'distance', FILTER_SANITIZE_STRING)){
+  displayTicker(get_field('distance_filter', 40));
+}?>
 <?php get_footer(); ?>

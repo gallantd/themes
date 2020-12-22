@@ -15,6 +15,7 @@ if(!function_exists('getRaceEvent')) {
             'allDist' => getAllDistance(get_field('distance', $id)),
             'elev' => get_field('elevation', $id),
             'date' => get_field('event_date', $id),
+            'time' => get_field('event_date', $id),
             'regCol' => get_field('register_link', $id),
             'cost' => get_field('registration_cost', $id),
             'regLink' => get_field('register', $id),
@@ -69,7 +70,9 @@ if(!function_exists('getAllDistance')) {
                 $returnData = $val['label'];
             }
             else {
+              if($val['label'] != ''){
                 $returnData .= "<b>|</b> {$val['label']} ";
+              }
             }
             $i++;
         }
