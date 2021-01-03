@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background: url("http://localhost:8888/irc/wp-content/themes/clean-slate/img/mountains.jpg") no-repeat 100%/100% 100% fixed;
+  background: url("http://iruncanada.com/wp-content/themes/clean-slate/img/mountains.jpg") no-repeat 100%/100% 100% fixed;
   color: $white;
   font-family: $sans;
   font-size: 1.2rem;
@@ -36,8 +36,9 @@ body {
   letter-spacing: 0.02em;
   height: 100%;
   width: 100%;
+  display: block;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden!important;
   @media only screen and (min-width: 768px) {
     font-size: 1.4rem;
   }
@@ -88,6 +89,9 @@ h3 {
   }
 }
 
+.sr-only {
+  display: none;
+}
 
 .irc-btn {
   padding: 1rem;
@@ -117,5 +121,26 @@ h3 {
       background-color: $grey-hover;
       color: $dark;
     }
+  }
+}
+.post-edit-link {
+  padding: 1rem;
+  background-color: $green;
+  display: table;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  font-family: $serif;
+  letter-spacing: 0.05em;
+  margin: 0 0 0 auto;
+  @media only screen and (min-width: 768px) {
+    padding: 1.2rem;
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 1.6rem;
+  }
+  &:hover {
+    background-color: $grey-hover;
+    color: $dark;
   }
 }

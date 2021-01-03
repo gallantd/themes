@@ -5,14 +5,14 @@
 $AllPosts = new AllPosts;
 if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING) || filter_input(INPUT_GET, 'distance', FILTER_SANITIZE_STRING)){
   $posts = $AllPosts->filters();
-  displayTicker(get_field('province_filter', 40));
 } else {
   $posts = $AllPosts->posts();
 }
-
 $pagination = $AllPosts->getPagination(); // Get pagination
 $totalPosts = count($posts);
 ?>
+
+<?php   displayTicker(get_field('province_filter', get_option('page_on_front'))); ?>
 
 <?php
     $x = 0;
@@ -62,6 +62,7 @@ if (!empty($pagination)): ?>
 <?php if(empty($posts) && locate_template('template/no-results.php')){ include('template/no-results.php');} ?>
 <?php
 if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING) || filter_input(INPUT_GET, 'distance', FILTER_SANITIZE_STRING)){
-  displayTicker(get_field('distance_filter', 40));
+
+//  displayTicker(get_field('distance_filter', get_option('page_on_front')));
 }?>
 <?php get_footer(); ?>

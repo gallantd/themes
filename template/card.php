@@ -1,1 +1,3 @@
-CARD PHP
+<article class="card">
+  CARD PHP
+</article>

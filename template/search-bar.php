@@ -1,8 +1,7 @@
-<aside class="search-bar">
-  <form class="search-form">
-    <label for="search-box"></label>
-    <input name="search-box" class="search-box" id="search-box"/>
-    <button type="button" name="button" class="search-btn irc-btn irc-btn-green">Search</button>
-
+<div class="search-bar">
+  <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/search/')); ?>">
+  	<label for="iruncanada-search" class="sr-only"><?php echo _x('Search for:', 'label'); ?></label>
+    	<input id="iruncanada-search" type="search" class="search-box" autocomplete="off" name="search" placeholder="Search" value="<?php echo $searchTerm; ?>"/>
+      <input type="submit" id="searchsubmit" class="search-btn irc-btn irc-btn-green" value="search">
   </form>
-</aside>
+</div>

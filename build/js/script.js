@@ -60,13 +60,16 @@ function searchDisplay() {
         if (_this.hasClass('bar-open')) {
             _this.removeClass('bar-open');
             _menu.animate({
-                right: '-100%',
-            }, 300);
+                right: '-'+(_menu.width()+40)+'px',
+            }, 250, function(){
+              _menu.removeClass('search-open');
+            });
         } else {
             _this.addClass('bar-open');
+            _menu.addClass('search-open');
             _menu.animate({
                 right: '0',
-            }, 300);
+            }, 250);
         }
     });
 }

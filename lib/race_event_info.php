@@ -83,6 +83,7 @@ if(!function_exists('getAllDistance')) {
 if(!function_exists('getSite')) {
     function getSite($site)
     {
+      if(empty($site)){return false;}
         return '<a href="'.$site['url'].'" class="text-link" target="_blank">'.$site['title'].'</a>';
 
     }

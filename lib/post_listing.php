@@ -8,7 +8,7 @@ class AllPosts
      * Set Post type default value
      */
     private $type = 'post';
-    private $postsPerPage = 2;
+    private $postsPerPage = 10;
 
     /**
      * Set Post type to be searched
@@ -175,8 +175,8 @@ class AllPosts
             'base' => add_query_arg('paged', '%#%'),
             'format' => '?paged=%#%',
             'current' => max(1, $this->getPaged()),
-            'prev_text' => __(' <img class="icon-arrow icon-arrow-prev" aria-hidden="true" alt="Previous Page" src="http://localhost:8888/irc/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Previous</span>'),
-            'next_text' => __(' <img class="icon-arrow icon-arrow-next" aria-hidden="true" alt="Next Page" src="http://localhost:8888/irc/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Next</span>'),
+            'prev_text' => __(' <img class="icon-arrow icon-arrow-prev" aria-hidden="true" alt="Previous Page" src="http://iruncanada.com/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Previous</span>'),
+            'next_text' => __(' <img class="icon-arrow icon-arrow-next" aria-hidden="true" alt="Next Page" src="http://iruncanada.com/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Next</span>'),
             'show_all' => false,
             'mid_size' => 3,
             'type' => 'array'

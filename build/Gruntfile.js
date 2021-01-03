@@ -11,23 +11,23 @@ module.exports = function(grunt) {
                     outputStyle: 'compressed'
                 },
                 files: [{
-                    src: 'build/style.scss',
-                    dest: 'css/style.css',
+                    src: 'style.scss',
+                    dest: '../css/style.css',
                 }]
             }
         },
         concat: {
             dist: {
                 src: [
-                    'build/js/*.js'
+                    'js/*.js'
                 ],
-                dest: 'js/script.js',
+                dest: '../js/script.js',
             }
         },
         uglify: {
             build: {
-                src: 'js/script.js',
-                dest: 'js/script.js'
+                src: '../js/script.js',
+                dest: '../js/script.js'
             }
         },
         watch: {
@@ -35,14 +35,14 @@ module.exports = function(grunt) {
                 livereload: true
             },
             scripts: {
-                files: 'build/js/*.js',
+                files: 'js/*.js',
                 tasks: ['concat', 'uglify'],
                 options: {
                     livereload: true
                 },
             },
             css: {
-                files: 'build/**/*.scss',
+                files: 'scss/*.scss',
                 tasks: ['sass'],
                 options: {
                     livereload: true,
