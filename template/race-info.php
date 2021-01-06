@@ -1,7 +1,7 @@
 <h2 class="header"><?php the_title(); ?></h2>
 <div class="race--info">
-  <?php if(!empty($race['allDist'])):?>
-    <div class="race--details--info"><b>Distances:</b> <?= $race['allDist'];?></div>
+  <?php if(!empty($race['dist'])):?>
+    <div class="race--details--info"><b>Distances:</b> <?= $race['dist'];?></div>
   <?php endif ?>
   <?php if(!empty($race['address'])):?>
     <div class="race--details--info"><b>Location:</b> <?=$race['address'];?></div>

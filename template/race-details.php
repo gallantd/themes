@@ -1,7 +1,7 @@
 <section class="race--details">
     <aside class="race--details--show">
-        <?php if(!empty($race['allDist'])):?>
-            <div class="race--details--info"><b>Distance:</b> <?= $race['allDist'];?></div>
+        <?php if(!empty($race['dist'])):?>
+            <div class="race--details--info"><b>Distance:</b> <?= $race['dist'];?></div>
         <?php endif ?>
         <?php if(!empty($race['address'])):?>
             <div class="race--details--info"><b>Location:</b> <?=$race['address'];?></div>
@@ -13,14 +13,14 @@
             <div class="race--details--info"><b>Date:</b> <?=$race['date'];?></div>
         <?php endif ?>
     </aside>
-    <?php if(!empty($race['rd']) || !empty($race['city']) || !empty($race['prov']) || !empty($race['elev'])):?>
+    <?php if(!empty($race['contact']) || !empty($race['city']) || !empty($race['prov']) || !empty($race['elev'])):?>
   <div class="race--details--more">
         <div class="race--details--show-more">
             <?php if(!empty($race['time'])):?>
-                <div class="race--details--info"><b>Start Time:</b> <?=$race['time']; ?></div>
+                <div class="race--details--info"><b>Race Start:</b> <?=$race['time']; ?></div>
             <?php endif ?>
-            <?php if(!empty($race['rd'])):?>
-                <div class="race--details--info"><b>Race Director:</b> <?=$race['rd'];?></div>
+            <?php if(!empty($race['contact'])):?>
+                <div class="race--details--info"><b>Contact:</b> <?=$race['contact'];?></div>
             <?php endif ?>
             <?php if(!empty($race['elev'])):?>
                 <div class="race--details--info"><b>Elevation:</b> <?=$race['elev'];?> meters</div>

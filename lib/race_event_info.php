@@ -7,22 +7,27 @@ if(!function_exists('getRaceEvent')) {
     {
         return array(
             'img' => get_field('race_image', $id),
-            'rd' => get_field('race_director', $id),
+            'required' => get_field('required_gear', $id),
             'prov' => getProvince(get_field('province', $id)),
             'city' => get_field('city', $id),
             'address' => getAddress(get_field('province', $id), get_field('city', $id) ),
             'dist' => get_field('distance', $id),
-            'allDist' => get_field('distance', $id),
             'elev' => get_field('elevation', $id),
+            'dateSecheduled' => get_field('date_scheduled', $id),
             'date' => get_field('event_date', $id),
-            'time' => get_field('event_date', $id),
-            'regCol' => get_field('register_link', $id),
+            'time' => get_field('start_time', $id),
+            'color' => get_field('register_link', $id),
             'cost' => get_field('registration_cost', $id),
             'regLink' => get_field('register', $id),
             'site' => getSite(get_field('website', $id)),
             'cancelled' => get_field('is_cancelled', $id),
-            'past' => futureDate(get_field('event_date', $id))
+            'past' => futureDate(get_field('event_date', $id)),
+            'contact' => get_field('contact_info', $id),
         );
+
+
+        // start date acutally a date not numeric
+        // Link color using a set color with grey hover
     }
 }
 
@@ -59,7 +64,7 @@ if (!function_exists('futureDate')) {
     {
         $future = true;
 
-        if(empty($event)){ return false;}
+        if(empty($event)){ return 'Coming Soon';}
 
         $today = date("m/d");
         $cYear = date("Y");

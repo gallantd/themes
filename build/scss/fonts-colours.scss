@@ -7,10 +7,17 @@ $serif: 'Balsamiq Sans', cursive;
 //## Firebrick RED
 $red: #B22222;
 $red-hover: rgba(178, 34, 34, 0.7);
+$redfilter: invert(21%) sepia(77%) saturate(2110%) hue-rotate(340deg) brightness(89%) contrast(103%);
 //## Eerie Black
 $dark: #262626;
 //## Dark cyan
 $green: #368F8B;
+//## Orange
+$orange: #fc671a;
+$orangefilter: invert(45%) sepia(58%) saturate(1574%) hue-rotate(348deg) brightness(98%) contrast(101%);
+//## Blue
+$blue: #186687;
+$bluefilter: invert(33%) sepia(70%) saturate(550%) hue-rotate(153deg) brightness(88%) contrast(91%);
 //## Light Grey
 $grey: #CDCDCD;
 $grey-rgba: rgba(205,205,205, 0.2);
@@ -115,8 +122,22 @@ h3 {
       color: $white;
     }
   }
+  &-orange {
+    background-color: $orange;
+    &:hover {
+      background-color: $grey-hover;
+      color: $white;
+    }
+  }
   &-green {
     background-color: $green;
+    &:hover {
+      background-color: $grey-hover;
+      color: $dark;
+    }
+  }
+  &-blue {
+    background-color: $blue;
     &:hover {
       background-color: $grey-hover;
       color: $dark;

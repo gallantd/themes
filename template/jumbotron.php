@@ -13,8 +13,8 @@
 
 </header>
 
-<?php if(!empty($race['regLink']['url'])):
-   $btn = (!empty($race['regCol']))? " irc-btn-{$race['regCol']}":" irc-btn-green";
-?>
-<a class="irc-btn jumbotron--featured<?= $btn;?>" href="<?= $race['regLink']['url'] ?>" target="_blank"><?php echo (!empty($race['regLink']['title']))?$race['regLink']['title']:"REGISTER"; ?></a>
+<?php
+   $btn = (!empty($race['color']))? " irc-btn-{$race['color']}":" irc-btn-green";
+   if(!empty($race['regLink']['url'])):?>
+  <a class="irc-btn jumbotron--featured<?= $btn;?>" href="<?= $race['regLink']['url'] ?>" target="_blank"><?php echo (!empty($race['regLink']['title']))?$race['regLink']['title']:"REGISTER"; ?></a>
 <?php endif;?>

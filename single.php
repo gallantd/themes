@@ -6,7 +6,7 @@
 
     <?php if(locate_template('template/jumbotron.php') && !empty($race['img'])){ include( 'template/jumbotron.php' );} ?>
 
- <section class="single--race">
+ <section class="single--race single-<?=$race['color'];?>">
     <article id="post-<?php the_ID();?>" class="single--race-article">
         <div class="header">
             <h2 class="entry-title"><?php the_title(); ?></h2>

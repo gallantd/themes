@@ -21,3 +21,73 @@
     letter-spacing: 0.03em;
   }
 }
+.single{
+  &-blue {
+    a {
+      color: $blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .post-edit-link {
+      background-color: $blue;
+      color: $white;
+    }
+    .a2a_svg {
+      background-color: $blue!important;
+    }
+  }
+
+  &-orange {
+    a {
+      color: $orange;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .post-edit-link {
+      background-color: $orange;
+      color: $white;
+    }
+    .a2a_svg {
+      background-color: $orange!important;
+    }
+  }
+
+  &-green {
+    a {
+      color: $green;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .post-edit-link {
+      background-color: $green;
+      color: $white;
+    }
+    .a2a_svg {
+      background-color: $green!important;
+    }
+  }
+
+  &-red {
+    a {
+      color: $red;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .post-edit-link {
+      background-color: $red;
+      color: $white;
+    }
+    .a2a_svg {
+      background-color: $red!important;
+    }
+  }
+
+}
