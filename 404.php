@@ -6,7 +6,7 @@
 <h1 class="entry-title"><?php esc_html_e( 'Sorry!', 'clean-slate' ); ?></h1>
 </header>
 <div class="entry-content">
-<p><?php esc_html_e( 'It looks like you\'ve taken a wrong turn. maybe try a search. ', 'clean-slate' ); ?></p>
+  <p><?php esc_html_e( 'It looks like you\'ve taken a wrong turn. maybe try a search. ', 'clean-slate' ); ?></p>
 </div>
 </section>
 
