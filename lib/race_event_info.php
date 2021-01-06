@@ -11,8 +11,8 @@ if(!function_exists('getRaceEvent')) {
             'prov' => getProvince(get_field('province', $id)),
             'city' => get_field('city', $id),
             'address' => getAddress(get_field('province', $id), get_field('city', $id) ),
-            'dist' => getDistance(get_field('distance', $id)),
-            'allDist' => getAllDistance(get_field('distance', $id)),
+            'dist' => get_field('distance', $id),
+            'allDist' => get_field('distance', $id),
             'elev' => get_field('elevation', $id),
             'date' => get_field('event_date', $id),
             'time' => get_field('event_date', $id),
@@ -36,47 +36,6 @@ if(!function_exists('getProvince')) {
     function getProvince($loc)
     {
         return $loc['label'];
-    }
-}
-
-if(!function_exists('getDistance')) {
-    function getDistance($dist)
-    {
-        if(empty($dist)){return false;}
-        $maxDist = 0;
-        $returnData = '';
-        foreach ($dist as $val) {
-            if($maxDist < $val){
-                $maxDist = $val['value'];
-                $returnData = $val['label'];
-            }
-        }
-        return $returnData;
-    }
-}
-
-if(!function_exists('getAllDistance')) {
-    function getAllDistance($dist)
-    {
-        if(empty($dist)){return false;}
-        $count = count($dist);
-        $i = 0;
-        $returnData = '';
-        foreach ($dist as $val) {
-            if($i == 0 && $count > 1){
-                $returnData = "<br>{$val['label']} ";
-            }
-            elseif ($i == 0 && $count == 1){
-                $returnData = $val['label'];
-            }
-            else {
-              if($val['label'] != ''){
-                $returnData .= "<b>|</b> {$val['label']} ";
-              }
-            }
-            $i++;
-        }
-        return $returnData;
     }
 }
 

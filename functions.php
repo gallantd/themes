@@ -19,12 +19,6 @@ function cleanSlateBase() {
 }
 add_action( 'wp_enqueue_scripts', 'cleanSlateBase' );
 
-if(!function_exists('promoRaceEvent')){
-    function defaultRaceEvent(){
-        echo "Promo";
-    }
-}
-
 if(!function_exists('displayTicker')){
    function displayTicker($values, $type = 'province'){
        if(empty($values)){ return false; }

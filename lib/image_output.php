@@ -109,10 +109,10 @@ if(!function_exists('get_defaults')){
       0 => array(
         'title' => 'I Run Canada',
         'alt' => 'I Run Canada',
-        'default' => 'http://iruncanada.com/wp-content/themes/clean-slate/img/mountains.jpg',
+        'default' => 'https://iruncanada.com/wp-content/themes/clean-slate/img/mountains.jpg',
         'imgClass' => '',
         'srcset' => array (
-          '0' => 'http://iruncanada.com/wp-content/themes/clean-slate/img/mountains.jpg'
+          '0' => 'https://iruncanada.com/wp-content/themes/clean-slate/img/mountains.jpg'
           )
         )
     );

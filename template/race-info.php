@@ -10,5 +10,7 @@
     <div class="race--details--info"><b>Date:</b> <?=$race['date'];?></div>
   <?php endif ?>
 </div>
-<a class="irc-cta irc-btn-green" href="<?= $race['regLink']['url'] ?>" target="_blank">Register</a>
+<?php if(!empty($race['regLink']['url'])):?>
+  <a class="irc-cta irc-btn-green" href="<?= $race['regLink']['url'] ?>" target="_blank">Register</a>
+<?php endif;?>
 <a class="irc-cta irc-cta-white" href="<?php the_permalink();?>" targe="_blank">Details</a>
