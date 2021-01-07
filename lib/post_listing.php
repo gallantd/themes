@@ -8,7 +8,7 @@ class AllPosts
      * Set Post type default value
      */
     private $type = 'post';
-    private $postsPerPage = 10;
+    private $postsPerPage = 100;
 
     /**
      * Set Post type to be searched

@@ -309,3 +309,10 @@ class AdvancedSearch
 }
 
 $AdvancedSearch = new AdvancedSearch;
+
+
+function prevent_redirect( $redirect_url ){
+	if( is_paged() && is_singular() ) $redirect_url = false;
+	return $redirect_url;
+}
+add_filter('redirect_canonical', 'prevent_redirect');
