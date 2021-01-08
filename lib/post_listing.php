@@ -51,21 +51,11 @@ class AllPosts
 
     public function filters()
     {
-      $data = '';
-      if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING)){
+
         $this->setFilterType('province');
         $this->setFilterValue(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING));
 
-        $data = $this->runProvinceQuery();
-      }
-      if(filter_input(INPUT_GET, 'distance', FILTER_SANITIZE_STRING)){
-        $this->setFilterType('distance');
-        $this->setFilterValue(filter_input(INPUT_GET, 'distance', FILTER_SANITIZE_STRING));
-
-        $data = $this->runProvinceQuery();
-      }
-
-      return $data;
+      return $this->runProvinceQuery();
     }
 
     private function runProvinceQuery()
@@ -86,37 +76,9 @@ class AllPosts
                   'compare' => '=',
               ),
               array(
-                  'key' => 'event_date',
-                  'value' => date('Ymd'),
-                  'compare' => '>=',
-              )
-          )
-        )
-      );
-        return $this->wpQuery->posts;
-    }
-
-    private function runDistanceQuery()
-    {
-      $this->paged = filter_input(INPUT_GET, 'paged', FILTER_SANITIZE_STRING);
-
-      $this->wpQuery = new WP_Query(array(
-          'post_type' => $this->type,
-          'paged'  => $this->paged,
-          'post_status' => 'publish',
-          'posts_per_page' => $this->postsPerPage,
-          'meta_key' => $this->filterType,
-          'meta_query' => array(
-            'relation' => "AND",
-              array(
-                  'key' => $this->filterType,
-                  'value' => $this->filterValue,
-                  'compare' => '=',
-              ),
-              array(
-                  'key' => 'event_date',
-                  'value' => date('Ymd'),
-                  'compare' => '>=',
+                  'key' => 'is_cancelled',
+                  'value' => true,
+                  'compare' => '!=',
               )
           )
         )
@@ -132,21 +94,7 @@ class AllPosts
             'post_type' => $this->type,
             'paged'  => $this->paged,
             'post_status' => 'publish',
-            'posts_per_page' => $this->postsPerPage,
-            'meta_key' => 'event_date',
-            'meta_query' => array(
-                'relation' => "OR",
-                array(
-                    'key' => 'event_date',
-                    'value' => date('Ymd'),
-                    'compare' => '>=',
-                ),
-                array(
-                    'key' => 'event_date',
-                    'value' => '',
-                    'compare' => '=',
-                )
-            )
+            'posts_per_page' => $this->postsPerPage
           )
         );
         return $this->wpQuery->posts;
