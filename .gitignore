@@ -1,10 +1,10 @@
 /.htpasswd
 /.rsync-filter
 /.idea
-/node_modules
-/node_modules/*
+build/node_modules
+build/node_modules/*
 *.sql
 *.sql.gz
 !/http/htdocs/content/uploads/.gitkeep
-/package-lock.json
+build/package-lock.json
 /.DS_Store

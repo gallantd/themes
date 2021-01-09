@@ -1,0 +1,36 @@
+.race--details {
+  background-color: $grey-rgba;
+  position: relative;
+  margin: 2rem auto;
+  color: $white;
+  @media only screen and (min-width: 768px) {
+    margin: 2.4rem auto;
+  }
+  @media only screen and (min-width: 1024px) {
+    margin: 3.2rem auto;
+  }
+  &--show, &--show-more {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2.4rem;
+      padding: 2.4rem;
+      text-align: left;
+    }
+    @media only screen and (min-width: 1024px) {
+      grid-gap: 3.2rem;
+      padding: 3.2rem ;
+    }
+  }
+  &--info {
+    grid-column: span 1;
+    b{
+      text-transform: capitalize;
+    }
+  }
+}

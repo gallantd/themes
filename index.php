@@ -1,10 +1,9 @@
 <?php get_header(); ?>
-<main id="content">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php comments_template(); ?>
-<?php endwhile; endif; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-</main>
-<?php get_sidebar(); ?>
+
+<?php if(locate_template('template/jumbotron.php')){ include( 'template/jumbotron.php' );} ?>
+
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+    echo "INDEX";
+endwhile; endif; ?>
 <?php get_footer(); ?>

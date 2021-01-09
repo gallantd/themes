@@ -1,0 +1,106 @@
+.sr-pagination {
+  width: 100%;
+  display: none;
+
+  @media only screen and (min-width: 768px) {
+    display: block;
+    margin: 6rem auto;
+  }
+
+  &--mobile {
+    display: block;
+
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+
+  }
+
+  &__item {
+    list-style: none;
+
+    .page-numbers:not(.next):not(.prev) {
+      display: none;
+      @media only screen and (min-width: 768px) {
+        display: flex;
+      }
+      justify-content: center;
+      align-items: center;
+      transition: 300ms box-shadow cubic-bezier(0.4, 0, 0.6, 1);
+      text-decoration: none;
+      width: 5rem;
+      overflow: hidden;
+      height: 5.1rem;
+      color: $white;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        background: $green;
+        color: $white;
+        text-decoration: none;
+      }
+
+      .search-results__pagination-li.active &{
+        background: $green;
+        color: $white;
+      }
+    }
+
+    &.active .page-numbers:not(.next):not(.prev) {
+      background: $green;
+      color: $white;
+    }
+
+    .page-numbers.next,
+    .page-numbers.prev {
+      .icon-arrow{
+        display: inline-block;
+        width: 2.6rem;
+        height: 5rem;
+        filter: $whitefilter;
+      }
+    }
+
+    .page-numbers.next .icon-arrow{
+      margin-left: 0.6rem;
+    }
+
+    .page-numbers.prev .icon-arrow{
+      transform: rotate(180deg);
+      margin-right: 0.6rem;
+    }
+  }
+
+  &__info {
+    list-style: none;
+    margin: 0 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: $white
+
+    strong {
+      margin: 0 0.5rem;
+    }
+  }
+}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+.s-results__link {
+  color: #000;
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,12 @@
+.featured {
+  margin: 2rem auto;
+  width: 100%;
+  padding: 2rem;
+  background: coral;
+  display: block;
+  & .card-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
