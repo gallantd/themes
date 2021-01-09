@@ -15,6 +15,6 @@
 
 <?php
    $btn = (!empty($race['color']))? " irc-btn-{$race['color']}":" irc-btn-green";
-   if(!empty($race['regLink']['url'])):?>
-  <a class="irc-btn jumbotron--featured<?= $btn;?>" href="<?= $race['regLink']['url'] ?>" target="_blank"><?php echo (!empty($race['regLink']['title']))?$race['regLink']['title']:"REGISTER"; ?></a>
+   if(!empty($race['register']['url'])):?>
+  <a class="irc-btn jumbotron--featured<?= $btn;?>" href="<?= $race['register']['url'] ?>" target="_blank"><?php echo (!empty($race['regLink']['title']))?$race['regLink']['title']:"REGISTER"; ?></a>
 <?php endif;?>

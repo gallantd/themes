@@ -1,37 +1,30 @@
+
 <section class="race--details">
     <aside class="race--details--show">
-        <?php if(!empty($race['dist'])):?>
-            <div class="race--details--info"><b>Distance:</b> <?= $race['dist'];?></div>
-        <?php endif ?>
-        <?php if(!empty($race['address'])):?>
-            <div class="race--details--info"><b>Location:</b> <?=$race['address'];?></div>
-        <?php endif ?>
-        <?php if(!empty($race['cost'])):?>
-            <div class="race--details--info"><b>Race Fee:</b> $<?=$race['cost'];?> CAD</div>
-        <?php endif ?>
-        <?php if(!empty($race['date'])):?>
-            <div class="race--details--info"><b>Date:</b> <?=$race['date'];?></div>
-        <?php endif ?>
-    </aside>
-    <?php if(!empty($race['contact']) || !empty($race['city']) || !empty($race['prov']) || !empty($race['elev'])):?>
-  <div class="race--details--more">
-        <div class="race--details--show-more">
-            <?php if(!empty($race['time'])):?>
-                <div class="race--details--info"><b>Race Start:</b> <?=$race['time']; ?></div>
-            <?php endif ?>
-            <?php if(!empty($race['contact'])):?>
-                <div class="race--details--info"><b>Contact:</b> <?=$race['contact'];?></div>
-            <?php endif ?>
-            <?php if(!empty($race['elev'])):?>
-                <div class="race--details--info"><b>Elevation:</b> <?=$race['elev'];?> meters</div>
-            <?php endif ?>
-            <?php if(!empty($race['site'])):?>
-                <div class="race--details--info"><b>Website:</b> <?=$race['site'];?></div>
-            <?php endif ?>
-        </div>
-    </div>
-        <button class="irc-btn <?= $btn;?> race--details--btn" id="show-more">see more </button>
-        <button class="irc-btn <?= $btn;?> race--details--btn-less" id="show-less">hide details </button>
-    <?php endif;?>
+      <?php
+      foreach ($event as $key => $value) {
+        if (!empty($value)) {
+          switch($key){
+            case 'race fee':?>
+              <div class="race--details--info"><b><?=$key?>:</b> $<?= $value;?> CAD</div>
+<?php       break;
+            case 'elevation':?>
+              <div class="race--details--info"><b><?=$key?>:</b> <?= $value;?> meters</div>
+  <?php     break;
+            case 'website': ?>
+              <div class="race--details--info"><b><?=$key?>:</b> <?= getURL($value);?></div>
+<?php       break;
+            case 'register': ?>
+              <div class="race--details--info"><b><?=$key?>:</b> <?= getURL($value , $key); ?></div>
+<?php       break;
+            default:?>
+              <div class="race--details--info"><b><?=$key?>:</b> <?= $value;?></div>
+      <?php } // end switch
+        } // end if
+        array_shift($event);
+      //  if($i >= 4){ break;}
 
+      }// end foreach
+?>
+    </aside>
 </section>

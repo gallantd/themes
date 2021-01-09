@@ -17,7 +17,7 @@ $totalPosts = count($posts);
 <?php
     $x = 0;
 foreach ($posts as $key => $post) :?>
-    <?php $race = getRaceEvent($post->ID);
+    <?php $race = getRaceEvents($post->ID);
       $cancelled = (!empty($race['cancelled']))? 'cancelled-event' : '';
 
         $val = ($x%2 != 0)? 'even':'odd'; ?>
