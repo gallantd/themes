@@ -22,7 +22,7 @@ $pagination = $AdvancedSearch->getPagination(); // Get pagination
 
 		<?php $x = 0;
 			foreach ($AdvancedSearch->getPosts() as $post):?>
-			<?php $race = getRaceEvent($post->ID);
+			<?php $race = getRaceEvents($post->ID);
 	      $cancelled = (!empty($race['cancelled']))? 'cancelled-event' : '';
 
 	        $val = ($x%2 != 0)? 'even':'odd'; ?>

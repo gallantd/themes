@@ -26,6 +26,13 @@
       bottom: 3.2rem;
       right: 3.2rem;
     }
+    a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   &--img {
     width: 100%;
