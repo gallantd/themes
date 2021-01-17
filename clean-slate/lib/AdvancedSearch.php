@@ -276,7 +276,7 @@ class AdvancedSearch
 	 *
 	 * @param int $postsPerPage Number of results to display on a page
 	 */
-	public function runSearchQuery($postsPerPage = 6)
+	public function runSearchQuery($postsPerPage = 100)
 	{
 		// $wp_query because it sets a tag to let wordpress know its a search page;
 		$this->wpQuery = new WP_Query(array(

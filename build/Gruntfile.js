@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     src: 'style.scss',
-                    dest: '../css/style.css',
+                    dest: '../clean-slate/css/style.css',
                 }]
             }
         },
@@ -21,13 +21,13 @@ module.exports = function(grunt) {
                 src: [
                     'js/*.js'
                 ],
-                dest: '../js/script.js',
+                dest: '../clean-slate/js/script.js',
             }
         },
         uglify: {
             build: {
-                src: '../js/script.js',
-                dest: '../js/script.js'
+                src: '../clean-slate/js/script.js',
+                dest: '../clean-slate/js/script.js'
             }
         },
         watch: {
@@ -52,4 +52,5 @@ module.exports = function(grunt) {
     });
     grunt.registerTask('default', ['concat', 'sass','uglify']);
     grunt.registerTask('dev', ['watch']);
+    grunt.registerTask('build', ['concat', 'sass','uglify']);
 };

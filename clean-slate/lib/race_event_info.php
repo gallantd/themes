@@ -69,8 +69,9 @@ if(!function_exists('getSchedule')){
 }
 
 if(!function_exists('getAddress')){
-  function getAddress($prov, $city){
-    return "{$city}, {$prov['label']}";
+  function getAddress($prov = array('label'=> ''), $city = ''){
+
+    return "{$city} {$prov['label']}";
   }
 }
 
