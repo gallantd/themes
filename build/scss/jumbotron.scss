@@ -26,13 +26,9 @@
       bottom: 3.2rem;
       right: 3.2rem;
     }
-    a {
-      color: $white;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  }
+  h3.jumbotron--title {
+    line-height: 35%;
   }
   &--img {
     width: 100%;
