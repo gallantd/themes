@@ -16,7 +16,7 @@ $green: #368F8B;
 $orange: #fc671a;
 $orangefilter: invert(45%) sepia(58%) saturate(1574%) hue-rotate(348deg) brightness(98%) contrast(101%);
 //## Blue
-$blue: #186687;
+$blue: #0073aa;
 $bluefilter: invert(33%) sepia(70%) saturate(550%) hue-rotate(153deg) brightness(88%) contrast(91%);
 //## Light Grey
 $grey: #CDCDCD;
@@ -66,7 +66,7 @@ h1 {
   font-family: $serif;
   letter-spacing: 0.02em;
   line-height: 100%;
-
+  text-transform: uppercase;
   @media only screen and (min-width: 768px) {
     font-size: 3.5rem;
   }
@@ -78,6 +78,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: bold;
   font-family: $serif;
+  text-transform: uppercase;
   @media only screen and (min-width: 768px) {
     font-size: 1.8rem;
   }

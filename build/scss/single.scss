@@ -33,6 +33,10 @@
     .post-edit-link {
       background-color: $blue;
       color: $white;
+      &:hover {
+        background-color: $grey-hover;
+        color: $dark;
+      }
     }
     .a2a_svg {
       background-color: $blue!important;
@@ -50,6 +54,10 @@
     .post-edit-link {
       background-color: $orange;
       color: $white;
+      &:hover {
+        background-color: $grey-hover;
+        color: $dark;
+      }
     }
     .a2a_svg {
       background-color: $orange!important;
@@ -67,9 +75,16 @@
     .post-edit-link {
       background-color: $green;
       color: $white;
+      &:hover {
+        background-color: $grey-hover;
+        color: $dark;
+      }
     }
     .a2a_svg {
       background-color: $green!important;
+      &:hover {
+        background-color: $grey-hover;
+      }
     }
   }
 
@@ -84,9 +99,16 @@
     .post-edit-link {
       background-color: $red;
       color: $white;
+      &:hover {
+        background-color: $grey-hover;
+        color: $dark;
+      }
     }
     .a2a_svg {
       background-color: $red!important;
+      &:hover {
+        background-color: $grey-hover;
+      }
     }
   }
 
