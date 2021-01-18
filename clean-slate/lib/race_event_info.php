@@ -13,7 +13,9 @@ if(!function_exists('getRaceEvents')) {
             'distance' => get_field('distance', $id),
             'register' => get_field('register', $id),
             'cancelled' => get_field('is_cancelled', $id),
-            'date' => getSchedule($id)
+            'date' => getSchedule($id),
+            'title' => get_the_title($id),
+            'post' => get_permalink($id)
         );
     }
 }
@@ -59,10 +61,10 @@ if(!function_exists('getURL')) {
 
 if(!function_exists('getSchedule')){
   function getSchedule($id){
-    if(get_field('date_scheduled', $id)){
-        return get_field('event_date', $id);
+    if(get_field('date_scheduled', $id) && get_field('event_date', $id)){
+        $data = date("M d Y",strtotime(get_field('event_date', $id)));
     } else {
-      return 'coming soon';
+      $data = 'coming soon';
     }
     return $data;
   }

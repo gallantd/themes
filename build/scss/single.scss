@@ -112,4 +112,52 @@
     }
   }
 
+  &-yellow {
+    a {
+      color: $yellow;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .post-edit-link {
+      background-color: $yellow;
+      color: $dark;
+      &:hover {
+        background-color: $grey-hover;
+        color: $dark;
+      }
+    }
+    .a2a_svg {
+      background-color: $yellow!important;
+      &:hover {
+        background-color: $grey-hover;
+      }
+    }
+  }
+
+  &-brown {
+    a {
+      color: $brown;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .post-edit-link {
+      background-color: $brown;
+      color: $white;
+      &:hover {
+        background-color: $grey-hover;
+        color: $dark;
+      }
+    }
+    .a2a_svg {
+      background-color: $brown!important;
+      &:hover {
+        background-color: $grey-hover;
+      }
+    }
+  }
+
 }

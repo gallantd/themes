@@ -7,6 +7,7 @@ require_once locate_template("lib/AdvancedSearch.php");
 require_once locate_template("lib/race_event_info.php");
 require_once locate_template("lib/post_listing.php");
 require_once locate_template("lib/image_output.php");
+require_once locate_template("lib/featured-races.php");
 
 
 add_action('wp_head', function(){

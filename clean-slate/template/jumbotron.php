@@ -1,20 +1,30 @@
 <header class="header jumbotron">
     <?php
-    if(empty($race['img'])){
-      $image = get_defaults();
-      $title = "I RUN CANADA";
-    } else {
-      $image = set_image_array( array('imageArray' => $race['img'], 'singleImage' => true));
-      $title = get_the_title();
+    if(is_front_page()){
+       $race = getRaceEvents(featured());
+       echo output_pictures(set_image_array( array('imageArray' => $race['img'], 'singleImage' => true)), 'jumbotron--img');?>
+       <h1 class="jumbotron--title">I run Canada</h1>
+       <h3 class="jumbotron--title">
+         <a class="irc-link" href="<?=$race['post'];?>"><?= $race['title']; ?></a>
+       </h3>
+       <?php
     }
-      echo output_pictures($image, 'jumbotron--img');
+    elseif(empty($race['img'])){
+      echo output_pictures(get_defaults(), 'jumbotron--img');?>
+      <h1 class="jumbotron--title">I run Canada</h1>
+      <?php
+    }
+    else {
+      echo output_pictures(set_image_array( array('imageArray' => $race['img'], 'singleImage' => true)), 'jumbotron--img');?>
+      <h1 class="jumbotron--title"><?= get_the_title(); ?></h1>
+      <?php
+    }
       ?>
-       <h1 class="jumbotron--title"><?= $title; ?></h1>
 
 </header>
 
 <?php
    $btn = (!empty($race['color']))? " irc-btn-{$race['color']}":" irc-btn-green";
-   if(!empty($race['register']['url'])):?>
+   if(!empty($race['register']['url']) && !is_front_page()):?>
   <a class="irc-btn jumbotron--featured<?= $btn;?>" href="<?= $race['register']['url'] ?>" target="_blank"><?php echo (!empty($race['regLink']['title']))?$race['regLink']['title']:"REGISTER"; ?></a>
 <?php endif;?>

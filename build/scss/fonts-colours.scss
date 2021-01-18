@@ -16,7 +16,7 @@ $green: #368F8B;
 $orange: #fc671a;
 $orangefilter: invert(45%) sepia(58%) saturate(1574%) hue-rotate(348deg) brightness(98%) contrast(101%);
 //## Blue
-$blue: #0073aa;
+$blue: #030C54;
 $bluefilter: invert(33%) sepia(70%) saturate(550%) hue-rotate(153deg) brightness(88%) contrast(91%);
 //## Light Grey
 $grey: #CDCDCD;
@@ -27,6 +27,10 @@ $lightBlue: #ACC8E5;
 //## Background
 $white: #f1f3f4;
 $whitefilter: invert(89%) sepia(2%) saturate(117%) hue-rotate(155deg) brightness(108%) contrast(96%);
+
+$yellow: #FEC343;
+
+$brown: #593C1F;
 
 html {
   font-size: 10px;
@@ -87,13 +91,13 @@ h2 {
   }
 }
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   @media only screen and (min-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
   @media only screen and (min-width: 1024px) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -101,6 +105,21 @@ h3 {
   display: none;
 }
 
+a  {
+  color: $green;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.irc-link {
+  color: $green;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .irc-btn {
   padding: 1rem;
   background-color: $green;
@@ -139,6 +158,21 @@ h3 {
   }
   &-blue {
     background-color: $blue;
+    &:hover {
+      background-color: $grey-hover;
+      color: $dark;
+    }
+  }
+  &-yellow {
+    background-color: $yellow;
+    color: $dark;
+    &:hover {
+      background-color: $grey-hover;
+      color: $dark;
+    }
+  }
+  &-brown {
+    background-color: $brown;
     &:hover {
       background-color: $grey-hover;
       color: $dark;
