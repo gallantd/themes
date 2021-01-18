@@ -3,15 +3,15 @@
     if(is_front_page()){
        $race = getRaceEvents(featured());
        echo output_pictures(set_image_array( array('imageArray' => $race['img'], 'singleImage' => true)), 'jumbotron--img');?>
-
-       <h1 class="jumbotron--title">
-         <a href="<?=$race['post'];?>"><?= $race['title']; ?></a>
-       </h1>
+       <h1 class="jumbotron--title">I run Canada</h1>
+       <h3 class="jumbotron--title">
+         <a class="irc-link" href="<?=$race['post'];?>"><?= $race['title']; ?></a>
+       </h3>
        <?php
     }
     elseif(empty($race['img'])){
       echo output_pictures(get_defaults(), 'jumbotron--img');?>
-      <h1 class="jumbotron--title">I RUN CANADA</h1>
+      <h1 class="jumbotron--title">I run Canada</h1>
       <?php
     }
     else {

@@ -105,6 +105,13 @@ h3 {
   display: none;
 }
 
+a  {
+  color: $green;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .irc-link {
   color: $green;
