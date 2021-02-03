@@ -8,7 +8,7 @@ class AllPosts
      * Set Post type default value
      */
     private $type = 'post';
-    private $postsPerPage = 100;
+    private $postsPerPage = 10;
 
     /**
      * Set Post type to be searched
@@ -69,16 +69,10 @@ class AllPosts
           'posts_per_page' => $this->postsPerPage,
           'meta_key' => $this->filterType,
           'meta_query' => array(
-            'relation' => "AND",
               array(
                   'key' => $this->filterType,
                   'value' => $this->filterValue,
                   'compare' => '=',
-              ),
-              array(
-                  'key' => 'is_cancelled',
-                  'value' => true,
-                  'compare' => '!=',
               )
           )
         )

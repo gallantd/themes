@@ -1,0 +1,37 @@
+div.wpforms-container-full .wpforms-form button[type=submit],
+div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  display: block;
+  background-color: #368F8B;
+  border: none;
+  text-align: center;
+  color: #f1f3f4;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  font-family: $sans;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-container-full .wpforms-form input[type=submit]:focus, div.wpforms-container-full .wpforms-form input[type=submit]:active, div.wpforms-container-full .wpforms-form button[type=submit]:hover, div.wpforms-container-full .wpforms-form button[type=submit]:focus, div.wpforms-container-full .wpforms-form button[type=submit]:active, div.wpforms-container-full .wpforms-form .wpforms-page-button:hover, div.wpforms-container-full .wpforms-form .wpforms-page-button:active, div.wpforms-container-full .wpforms-form .wpforms-page-button:focus {
+    background-color: #CDCDCD!important;
+    color: #262626!important;
+    border: none!important;
+}
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form select.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+  max-width: unset;
+}
+.wpforms-confirmation-container-full, div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+    background: $white;
+    border: 1px solid $green;
+    font-family: $sans;
+}
+
+div.wpforms-container-full {
+  max-width: 100rem;
+  padding: 0 2.4rem;
+  @media screen and (min-width: 768px){
+    padding: 0 3.2rem;
+  }
+}

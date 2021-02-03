@@ -2,26 +2,18 @@
 
 <?php if(locate_template('template/jumbotron.php')){ include( 'template/jumbotron.php' );} ?>
 
-<main id="content">
+<main id="content" class="page-content">
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <header class="header">
-<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
+<h1 class="entry-title"><?php the_title(); ?></h1>
 </header>
 <div class="entry-content">
 <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 <?php the_content(); ?>
 
-
-    <?php
-   echo get_field( "appear_on_page" );
-    echo get_field( "editor" );
-
-
-    ?>
-
-<div class="entry-links"><?php wp_link_pages(); ?></div>
+<?php edit_post_link(); ?>
 </div>
 </article>
 

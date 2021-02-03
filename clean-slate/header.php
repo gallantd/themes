@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> style="margin-top: 0!important;">
 <head>
+  <!-- Google Adsense -->
+  <script data-ad-client="ca-pub-9066115369712927" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <?php wp_head(); ?>
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel = "stylesheet">
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel = "stylesheet">
 </head>
 <body <?php body_class(); ?>>
