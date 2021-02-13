@@ -27,11 +27,3 @@ div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms
     border: 1px solid $green;
     font-family: $sans;
 }
-
-div.wpforms-container-full {
-  max-width: 100rem;
-  padding: 0 2.4rem;
-  @media screen and (min-width: 768px){
-    padding: 0 3.2rem;
-  }
-}

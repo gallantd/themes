@@ -11,23 +11,28 @@ module.exports = function(grunt) {
                     outputStyle: 'compressed'
                 },
                 files: [{
-                    src: 'style.scss',
-                    dest: '../clean-slate/css/style.css',
+                    src: 'preload.scss',
+                    dest: '../iruncanada/css/preload.css',
+                }, {
+                  src: 'postload.scss',
+                  dest: '../iruncanada/css/postload.css',
                 }]
             }
         },
         concat: {
             dist: {
                 src: [
-                    'js/*.js'
+                    'node_modules/jquery/dist/jquery.min.js',
+                    'node_modules/lazyload/lazyload.js',
+                    'js/*.js',
                 ],
-                dest: '../clean-slate/js/script.js',
+                dest: '../iruncanada/js/script.js',
             }
         },
         uglify: {
             build: {
-                src: '../clean-slate/js/script.js',
-                dest: '../clean-slate/js/script.js'
+                src: '../iruncanada/js/script.js',
+                dest: '../iruncanada/js/script.js'
             }
         },
         watch: {

@@ -1,58 +1,75 @@
 .footer {
   width: 100%;
   display: block;
-  margin-top: 4rem;
   padding: 10rem 0;
-
-  &--container {
-    max-width: 40%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  &--left {
-    text-align: center;
-    filter: $whitefilter;
-  }
-  .site-icon {
-    filter: $whitefilter;
-    width: 10rem;
-    height: 10rem;
-    padding: 1rem auto;
-    text-align: right;
-  }
-}
-
-.footer-widget {
-  text-align: center;
-  ul {
-    list-style-type: none;
-  }
-  li {
-    padding: 1rem 0;
-    text-transform: uppercase;
-    a {
-      text-decoration: none;
-      color: $white;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.contact {
-  text-align: center;
-  padding-bottom: 2rem;
-  p {
-    margin: 0 auto;
-    padding: 0;
-    letter-spacing: 0.3em;
-  }
+  max-width: 100rem;
+  margin: 4rem auto;
   a {
     color: $white;
+    &:hover {
+      color: $green;
+    }
   }
-  span {
-    padding: 0 1rem;
+  &-level-1 {
+    text-align: center;
+    padding-bottom: 2rem;
+    .site-icon {
+      width: 10rem;
+      height: 10rem;
+      padding: 1rem auto;
+      margin: 0 auto;
+    }
+    p {
+      margin: 0 auto;
+      padding: 0;
+      letter-spacing: 0.3em;
+    }
+
+    span {
+      padding: 0 1rem;
+    }
   }
+  &-level-2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    .full-width {
+      ul {list-style-type: none; padding: 0;}
+      li {display: inline-block; margin: 1rem auto;}
+      a {padding: 1rem 2rem; }
+    }
+  }
+  &-level-3 {
+    display: block;
+    @media screen and (min-width: 768px){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 1024px){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    grid-gap: 3.2rem;
+    padding: 0 3.2rem;
+    text-align: center;
+    .title {
+      text-transform: uppercase;
+    }
+    .widget-area {
+      font-size: 1.5rem;
+      margin-top: 2.8rem;
+      ul {list-style-type: none; padding: 0;}
+      li {margin: 1.5rem auto;}
+      a {padding: 1.5rem 2rem;}
+    }
+    .widget-area:last-of-type {
+      grid-column: 1 / span 2;
+      @media screen and (min-width: 1024px){
+        grid-column: unset;
+      }
+    }
+
+
+  }
+}
+.copyright {
+  padding: 3rem;
 }

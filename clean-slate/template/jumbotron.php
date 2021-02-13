@@ -1,3 +1,4 @@
+
 <header class="header jumbotron">
     <?php
     if(is_front_page()){

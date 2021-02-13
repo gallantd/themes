@@ -1,0 +1,86 @@
+.event-state {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+  font-weight: bold;
+  z-index: 100;
+	cursor: pointer;
+	&--header {
+		width: 70%;
+		margin-top: 15%;
+		margin-left: 15%;
+		padding: 1rem;
+		font-size: 2.5rem;
+		color: $white;
+		border: .5rem solid $white;
+		transform: rotate(10deg);
+    text-align: center;
+    text-transform: uppercase;
+	}
+}
+//
+// .race--even {
+// 	.event-state--header {
+// 		margin-right: 25%;
+// 	}
+// }
+// .race--odd {
+// 	.event-state--header {
+// 		margin-left: 25%;
+// 	}
+// }
+//
+// .event-state {
+//   position: fixed;
+//   width: 100vw;
+//   height: 100vh;
+//   @media only screen and (min-width: 768px) {
+//     width: 75vw;
+//     left: 12.5vw;
+//   }
+//   @media only screen and (min-width: 768px) {
+//     width: 50vw;
+//     left: 25vw;
+//   }
+//   &--header {
+//     color: $white;
+//     border-radius: 1rem;
+//     border: 0.3rem solid $white;
+//     padding: 2.5rem;
+//     font-size: 3.2rem;
+//     font-weight: bold;
+//     margin-top: 20vh;
+//
+
+//     @media only screen and (min-width: 768px) {
+//       padding: 6rem;
+//       font-size: 7.5rem;
+//       border: 1rem solid $red;
+//       margin-top: 30vh;
+//     }
+//   }
+// }
+
+.sold_out-event {
+	border: 1px solid $white;
+}
+.cancelled-event {
+	border: 1px solid $red;
+}
+
+.sold_out-event, .cancelled-event {
+	opacity: 0.6;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.cancelled-event {
+	.event-state--header {
+		color: $red;
+		border: 0.3rem solid $red;
+
+	}
+}

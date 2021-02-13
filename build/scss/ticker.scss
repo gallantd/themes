@@ -11,13 +11,8 @@
   flex-wrap: nowrap;
   justify-content: start;
   margin-bottom: 32px;
-  @media only screen and (min-width: 2240px) {
+  @media only screen and (min-width: 1840px) {
     justify-content: center;
-  }
-  &--10 {
-    @media only screen and (min-width: 1460px ) {
-      justify-content: center;
-    }
   }
   &--value {
     text-align: center;
