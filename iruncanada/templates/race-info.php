@@ -16,6 +16,6 @@
 
 </div>
 <?php if(!empty($race_results['register']['url']) && $race_results['cancelled'] != 1 && $race_results['sold_out'] != 1):?>
-  <a class="irc-cta irc-btn-green" href="<?= $race_results['register']['url'] ?>" target="_blank">Register</a>
+  <a class="irc-cta irc-btn" href="<?= $race_results['register']['url'] ?>" target="_blank">Register</a>
 <?php endif;?>
 <a class="irc-cta irc-cta-white link-back" href="<?php the_permalink();?>">Details</a>

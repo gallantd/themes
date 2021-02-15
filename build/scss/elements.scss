@@ -113,15 +113,6 @@ h3, .h3 {
 }
 
 
-
-//
-// .irc-link {
-//   color: $green;
-//   text-decoration: none;
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// }
 .irc-btn {
   padding: 1rem;
   background-color: $green;
@@ -136,49 +127,7 @@ h3, .h3 {
   @media only screen and (min-width: 1024px) {
     padding: 1.6rem;
   }
-  // &-red {
-  //   background-color: $red;
-  //   &:hover {
-  //     background-color: $grey-hover;
-  //     color: $white;
-  //   }
-  // }
-//   &-orange {
-//     background-color: $orange;
-//     &:hover {
-//       background-color: $grey-hover;
-//       color: $white;
-//     }
-//   }
-  // &-green {
-  //   background-color: $green;
-  //   &:hover {
-  //     background-color: $grey;
-  //     color: $dark;
-  //   }
-  // }
-//   &-blue {
-//     background-color: $blue;
-//     &:hover {
-//       background-color: $grey-hover;
-//       color: $dark;
-//     }
-//   }
-//   &-yellow {
-//     background-color: $yellow;
-//     color: $dark;
-//     &:hover {
-//       background-color: $grey-hover;
-//       color: $dark;
-//     }
-//   }
-//   &-brown {
-//     background-color: $brown;
-//     &:hover {
-//       background-color: $grey-hover;
-//       color: $dark;
-//     }
-//   }
+
 }
 
 .post-edit-link {

@@ -164,8 +164,8 @@ class AdvancedSearch
 			'base' => add_query_arg('paged', '%#%'),
 			'format' => '?paged=%#%',
 			'current' => max(1, $this->getPaged()),
-			'prev_text' => __(' <img class="icon-arrow icon-arrow-prev" aria-hidden="true" alt="Previous Page" src="https://iruncanada.com/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Previous</span>'),
-      'next_text' => __(' <img class="icon-arrow icon-arrow-next" aria-hidden="true" alt="Next Page" src="https://iruncanada.com/wp-content/themes/clean-slate/img/arrow.png"><span class="sr-only">Next</span>'),
+			'prev_text' => __(' <img class="icon-arrow icon-arrow-prev" aria-hidden="true" alt="Previous Page" src="https://iruncanada.com/wp-content/themes/iruncanada/img/arrow.png"><span class="sr-only">Previous</span>'),
+      'next_text' => __(' <img class="icon-arrow icon-arrow-next" aria-hidden="true" alt="Next Page" src="https://iruncanada.com/wp-content/themes/iruncanada/img/arrow.png"><span class="sr-only">Next</span>'),
 			'show_all' => false,
 			'mid_size' => 2,
 			'type' => 'array'
