@@ -3,10 +3,10 @@
   <head>
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <?php wp_head(); ?>
+      <?php wp_head();?>
       <link href="<?php bloginfo('stylesheet_url'); ?>" rel = "stylesheet">
   </head>
-  <body <?php body_class(); ?>>
+  <body <?php body_class(get_page_theme()); ?>>
     <div class="wrapper">
       <nav class="nav desktop">
           <a href="<?= get_home_url();?>" class="icon-link">

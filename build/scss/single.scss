@@ -1,163 +1,175 @@
-.single--race {
-  width: 100%;
-  position: relative;
-  margin-top: 2rem;
-  @media only screen and (min-width: 768px){
-    margin-top: 2.4rem;
+.single{
+  h1.jumbotron--title {display: none;}
+  h3.jumbotron--title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $white;
+    font-family: $serif;
+    text-transform: uppercase;
+    @media only screen and (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+    @media only screen and (min-width: 1280px) {
+      font-size: 4.5rem;
+    }
+    a {
+      color: $white;
+      &:hover {
+        text-decoration: none;
+        color: $white;
+        cursor: default;
+      }
+    }
   }
-  @media only screen and (min-width: 1024px){
-    margin-top: 3.2rem;
+  &__loading {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    .loader {
+      border: 1.6rem solid $grey;
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+      margin: 0 auto;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
-  &-article {
-    max-width: 140rem;
-    text-align: left;
-    margin: 0 auto;
-    padding: 2.4rem;
+  &--banner {
+    width: 100%;
+    text-align: center;
+    margin: 2.4rem auto;
+    @media screen and (min-width: 768px){
+      margin: 3.2rem auto;
+    }
+    @media screen and (min-width: 1024px){
+      margin: 4rem auto;
+    }
+  }
+  &--tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    @media screen and (min-width: 728px){
+      margin-top: 6.5rem;
+    }
+    @media screen and (min-width: 1024px){
+      margin-top: 8rem;
+    }
+
+  }
+  &--tab {
+    width: auto;
+    color: $white;
+    border: 1px solid $white;
+    padding: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    &.active {
+      border-bottom: none;
+      background-color: $grey-rgba;
+    }
+  }
+
+  &--container {
+    width: 100%;
+    min-height: 35rem;
     background-color: $grey-rgba;
+    position: relative;
+    border: 1px solid $white;
+    border-top: none;
   }
-  &-post {
-    margin: 3.2rem auto;
-    line-height: 140%;
-    letter-spacing: 0.03em;
+  .active {
+    border-bottom: none;
   }
 }
-.single{
-  &-blue {
-    a {
-      color: $blue;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+
+.addtoany_shortcode {
+  margin: 2.4rem 0;
+  @media screen and (min-width: 768px){
+    margin: 3.2rem 0;
+  }
+  @media screen and (min-width: 768px){
+    margin: 4rem 0;
+  }
+}
+
+.race--details {
+  position: relative;
+  &--message {
+    padding: 2.4rem;
+    text-align: center;
+    @media only screen and (min-width: 768px) {
+      padding: 3.2rem;
     }
-    .post-edit-link {
-      background-color: $blue;
-      color: $white;
-      &:hover {
-        background-color: $grey-hover;
-        color: $dark;
-      }
-    }
-    .a2a_svg {
-      background-color: $blue!important;
+    @media only screen and (min-width: 1024px) {
+      padding: 4rem ;
     }
   }
-
-  &-orange {
-    a {
-      color: $orange;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+  &--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.4rem;
+    padding: 2.4rem;
+    min-height: 35rem;
+    text-align: center;
+    justify-content: center;
+    @media only screen and (min-width: 768px) {
+      grid-gap: 3.2rem;
+      padding: 3.2rem;
+      text-align: left;
     }
-    .post-edit-link {
-      background-color: $orange;
-      color: $white;
-      &:hover {
-        background-color: $grey-hover;
-        color: $dark;
-      }
-    }
-    .a2a_svg {
-      background-color: $orange!important;
+    @media only screen and (min-width: 1024px) {
+      grid-gap: 4rem;
+      padding: 4rem ;
     }
   }
-
-  &-green {
-    a {
-      color: $green;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+  &--distances {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2.4rem;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    @media only screen and (min-width: 768px) {
+      grid-gap: 3.2rem;
+      padding: 1.2rem;
     }
-    .post-edit-link {
-      background-color: $green;
-      color: $white;
-      &:hover {
-        background-color: $grey-hover;
-        color: $dark;
-      }
+    @media only screen and (min-width: 1024px) {
+      grid-gap: 4rem;
+      padding: 1rem ;
     }
-    .a2a_svg {
-      background-color: $green!important;
-      &:hover {
-        background-color: $grey-hover;
-      }
+    &:last-of-type{ margin-bottom: 2rem;}
+    &.stripe {
+        background-color: $grey-rgba;
     }
   }
+  .note {font-size: 1.2rem!important;}
+}
 
-  &-red {
-    a {
-      color: $red;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    .post-edit-link {
-      background-color: $red;
-      color: $white;
-      &:hover {
-        background-color: $grey-hover;
-        color: $dark;
-      }
-    }
-    .a2a_svg {
-      background-color: $red!important;
-      &:hover {
-        background-color: $grey-hover;
-      }
-    }
-  }
-
-  &-yellow {
-    a {
-      color: $yellow;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    .post-edit-link {
-      background-color: $yellow;
-      color: $dark;
-      &:hover {
-        background-color: $grey-hover;
-        color: $dark;
-      }
-    }
-    .a2a_svg {
-      background-color: $yellow!important;
-      &:hover {
-        background-color: $grey-hover;
-      }
-    }
-  }
-
-  &-brown {
-    a {
-      color: $brown;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    .post-edit-link {
-      background-color: $brown;
-      color: $white;
-      &:hover {
-        background-color: $grey-hover;
-        color: $dark;
-      }
-    }
-    .a2a_svg {
-      background-color: $brown!important;
-      &:hover {
-        background-color: $grey-hover;
-      }
-    }
-  }
-
+.race-register {
+  position: fixed;
+  right: -75px;
+  top: 50rem;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  font-weight: bold;
+  a { padding: 2rem 4rem!important;}
 }

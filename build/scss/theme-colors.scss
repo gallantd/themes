@@ -1,0 +1,94 @@
+@mixin theme-color($color, $filter) {
+  .ticker, .nav, .footer, .race--details {
+    a {
+      color: $white;
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+  .sr-pagination {
+    &__item {
+      .page-numbers:not(.next):not(.prev) {
+        &:focus,
+        &:hover {
+          background: $color;
+        }
+        .search-results__pagination-li.active &{
+          background: $color;
+        }
+      }
+      &.active .page-numbers:not(.next):not(.prev) {
+        background: $color;
+      }
+      .page-numbers.next,
+      .page-numbers.prev {
+        .icon-arrow{
+  				&:hover {
+  					filter: $filter;
+  				}
+        }
+      }
+
+    }
+  }
+  .s-results__link {
+    &:hover {
+      color: $color;
+    }
+  }
+  a {
+    color: $color;
+    text-decoration: none;
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+  .post-edit-link, .race-register a {
+    background-color: $color;
+    color: $white;
+    padding: 1rem 2rem;
+    &:hover {
+      background-color: $grey;
+      color: $dark;
+    }
+  }
+  .a2a_svg {
+    background-color: $color!important;
+  }
+  .single{
+    &--tab {
+      border-color: $color;
+      &:hover {
+        color: $color;
+      }
+      &.active:hover {color: $white; cursor: default;}
+    }
+    &--container {
+      border-color: $color;
+    }
+    &__loading .loader{
+      border-top: 1.6rem solid $color;
+    }
+  }
+}
+
+.orange {
+  @include theme-color($orange, $orange-filter);
+}
+.green {
+  @include theme-color($green, $green-filter);
+}
+.blue {
+  @include theme-color($blue, $blue-filter);
+}
+.yellow {
+  @include theme-color($yellow, $yellow-filter);
+}
+.brown {
+  @include theme-color($brown, $brown-filter);
+}
+.red {
+  @include theme-color($red, $red-filter);
+}

@@ -20,19 +20,30 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            dist: {
+            basic: {
                 src: [
                     'node_modules/jquery/dist/jquery.min.js',
                     'node_modules/lazyload/lazyload.js',
-                    'js/*.js',
+                    'js/script.js',
                 ],
                 dest: '../iruncanada/js/script.js',
+            },
+            extras: {
+              src : ['js/single.js'],
+              dest: '../iruncanada/js/single.js',
             }
         },
         uglify: {
             build: {
-                src: '../iruncanada/js/script.js',
-                dest: '../iruncanada/js/script.js'
+              files: [{
+                expand: true,
+                cwd: '../iruncanada/js',
+                src: '*.js',
+                dest: '../iruncanada/js',
+                rename: function (dst, src) {
+                  return dst + '/' + src.replace('.js', '.js');
+                }
+        }]
             }
         },
         watch: {

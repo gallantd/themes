@@ -7,7 +7,7 @@
 function single_image($url){ ?>
   <picture class="<?= $url['class'];?>">
         <source media="(min-width:0px)" srcset="<?= $url['link'];?>">
-      <img  src=""
+      <img  src="#data"
             data-src="<?= $url['link'];?>"
             alt="<?= $url['alt'];?>"
             class="lazyload"
@@ -29,7 +29,7 @@ function output_pictures($image, $class = ''){
 
     ?>
       <img  src=""
-            data-src="<?= $image['image']['1440'];?>"
+            data-src="<?= $image['image']['0'];?>"
             alt="<?= $image['alt'];?>"
             class="lazyload"
             title="<?= $image['title'];?>"
@@ -49,13 +49,10 @@ function get_image_sizes($id , $featured =''){
 				'0' => get_the_post_thumbnail_url($id, 'Small-Crop'),
 			];
 	} else {
-		$prov = get_field('province', $id);
+		$prov = get_field('province', $id) ?? ['value'=>'virtual'];
 		$image = [
 			'0' => get_template_directory_uri() .'/img/flags/Flag_of_'.$prov['value'].'.svg'
 		];
-//		echo "NO FUCKING IMAGE PROV => {$prov['value']}";
 	}
-//
-
 	return $image;
 }

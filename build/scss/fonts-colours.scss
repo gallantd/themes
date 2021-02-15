@@ -7,7 +7,7 @@ $serif: 'Balsamiq Sans', cursive;
 //## Firebrick RED
 $red: #B22222;
 $red-hover: rgba(178, 34, 34, 0.7);
-$redfilter: invert(21%) sepia(77%) saturate(2110%) hue-rotate(340deg) brightness(89%) contrast(103%);
+$red-filter: invert(21%) sepia(77%) saturate(2110%) hue-rotate(340deg) brightness(89%) contrast(103%);
 //## Eerie Black
 $dark: #262626;
 //## Dark cyan
@@ -15,10 +15,12 @@ $green: #368F8B;
 $green-filter: invert(48%) sepia(34%) saturate(639%) hue-rotate(128deg) brightness(94%) contrast(92%);
 //## Orange
 $orange: #fc671a;
-$orangefilter: invert(45%) sepia(58%) saturate(1574%) hue-rotate(348deg) brightness(98%) contrast(101%);
+$orange-filter: invert(45%) sepia(58%) saturate(1574%) hue-rotate(348deg) brightness(98%) contrast(101%);
 //## Blue
-$blue: #030C54;
-$bluefilter: invert(33%) sepia(70%) saturate(550%) hue-rotate(153deg) brightness(88%) contrast(91%);
+
+$blue: #3D9AD1;
+$blue-filter: invert(60%) sepia(19%) saturate(1704%) hue-rotate(161deg) brightness(88%) contrast(83%);
+
 //## Light Grey
 $grey: #CDCDCD;
 $grey-rgba: rgba(205,205,205, 0.2);
@@ -27,8 +29,10 @@ $grey-hover: rgba(205,205,205, 0.4);
 $lightBlue: #ACC8E5;
 //## Background
 $white: #f1f3f4;
-$whitefilter: invert(89%) sepia(2%) saturate(117%) hue-rotate(155deg) brightness(108%) contrast(96%);
+$white-filter: invert(89%) sepia(2%) saturate(117%) hue-rotate(155deg) brightness(108%) contrast(96%);
 
 $yellow: #FEC343;
+$yellow-filter: invert(79%) sepia(84%) saturate(1657%) hue-rotate(325deg) brightness(108%) contrast(99%);
 
 $brown: #593C1F;
+$brown-filter: invert(21%) sepia(55%) saturate(539%) hue-rotate(349deg) brightness(93%) contrast(89%);

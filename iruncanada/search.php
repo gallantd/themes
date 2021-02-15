@@ -37,7 +37,7 @@ $pagination = $AdvancedSearch->getPagination(); // Get pagination
 								include(  'templates/event-state.php');
 							}?>
 						<aside class="race-container ">
-							<?php if(locate_template('templates/race-info.php')){ include('templates/race-info.php');} ?>
+								<?php if(locate_template('templates/race-info.php')){ include('templates/race-info.php');} ?>
 						</aside>
 				</section>
 <?php
@@ -68,4 +68,5 @@ $pagination = $AdvancedSearch->getPagination(); // Get pagination
 	 	</nav>
 
  <?php endif; ?>
+ <?php if(empty($AdvancedSearch->getPosts()) && locate_template('templates/no-results.php')){ include('templates/no-results.php');} ?>
 <?php get_footer();

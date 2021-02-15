@@ -38,19 +38,19 @@
       &:focus,
       &:hover {
         outline: none;
-        background: $green;
+        //background: $green;
         color: $white;
         text-decoration: none;
       }
 
       .search-results__pagination-li.active &{
-        background: $green;
+        //background: $green;
         color: $white;
       }
     }
 
     &.active .page-numbers:not(.next):not(.prev) {
-      background: $green;
+      //background: $green;
       color: $white;
     }
 
@@ -60,10 +60,7 @@
         display: inline-block;
         width: 2.6rem;
         height: 5rem;
-        filter: $whitefilter;
-				&:hover {
-					filter: $green-filter;
-				}
+        filter: $white-filter;
       }
     }
 
@@ -103,7 +100,7 @@
 }
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .s-results__link {
-  color: #000;
+  color: $dark;
   &:hover {
     color: $white;
     text-decoration: none;

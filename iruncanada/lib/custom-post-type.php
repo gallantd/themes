@@ -39,8 +39,6 @@ function register_trail_post_type() {
 }
 add_action('init', 'register_trail_post_type');
 
-
-
 /***************************************************************
  * Trail Category
  ***************************************************************/
@@ -73,3 +71,8 @@ function create_trail_category() {
     register_taxonomy('trails_category', 'trail', $args);
 }
 add_action( 'init', 'create_trail_category', 0 );
+
+/***************************************************************
+ * Page Excerpt
+ ***************************************************************/
+add_post_type_support( 'page', 'excerpt' );

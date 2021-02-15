@@ -31,7 +31,7 @@ body {
   margin-left: 2rem;
   vertical-align: top;
   background: url('https://iruncanada.com/wp-content/themes/iruncanada/img/icon.png') no-repeat 100%/100%;
-  filter: $whitefilter;
+  filter: $white-filter;
   @media only screen and (min-width: 768px) {
     width: 7rem;
     margin-left: 7rem;
@@ -54,16 +54,28 @@ body {
   display: none!important;
 }
 
+.mb-only {
+  display: inline-block;
+  @media screen and (min-width: 768px){
+    display: none;
+  }
+}
+.dsk-only {
+  display: none;
+  @media screen and (min-width: 768px){
+    display: inline-block;
+  }
+}
+
 button {background: none; outline: none;}
 a  {
-  color: $green;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
 }
 
-h1 {
+h1, .h1 {
   font-size: 2.5rem;
   font-weight: bold;
   font-family: $serif;
@@ -76,7 +88,7 @@ h1 {
   }
 }
 
-h2 {
+h2, .h2 {
   font-size: 1.7rem;
   font-weight: bold;
   font-family: $serif;
@@ -89,7 +101,7 @@ h2 {
   }
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.5rem;
   font-weight: bold;
   @media only screen and (min-width: 768px) {
@@ -116,7 +128,6 @@ h3 {
   display: table;
   text-transform: uppercase;
   text-decoration: none;
-  color: $white;
   font-family: $serif;
   letter-spacing: 0.05em;
   @media only screen and (min-width: 768px) {
@@ -139,13 +150,13 @@ h3 {
 //       color: $white;
 //     }
 //   }
-  &-green {
-    background-color: $green;
-    &:hover {
-      background-color: $grey;
-      color: $dark;
-    }
-  }
+  // &-green {
+  //   background-color: $green;
+  //   &:hover {
+  //     background-color: $grey;
+  //     color: $dark;
+  //   }
+  // }
 //   &-blue {
 //     background-color: $blue;
 //     &:hover {
@@ -172,11 +183,9 @@ h3 {
 
 .post-edit-link {
   padding: 1rem;
-  background-color: $green;
   display: table;
   text-transform: uppercase;
   text-decoration: none;
-  color: $white;
   font-family: $serif;
   letter-spacing: 0.05em;
   margin: 3rem 1rem 2rem auto;
@@ -185,9 +194,5 @@ h3 {
   }
   @media only screen and (min-width: 1024px) {
     padding: 1.6rem;
-  }
-  &:hover {
-    background-color: $grey;
-    color: $dark;
   }
 }

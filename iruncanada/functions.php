@@ -12,8 +12,7 @@ require_once locate_template("lib/helpers.php");
 require_once locate_template("lib/AdvancedSearch.php");
 require_once locate_template("lib/race_event_info.php");
 require_once locate_template("lib/all-races.php");
- //require_once locate_template("lib/image_output.php");
-
+require_once locate_template("lib/single.php");
 
 /***************************************************************
  * BASE STYLES AND SCRIPT INCLUDE
@@ -23,6 +22,13 @@ if(!function_exists('base_styles')) {
    wp_enqueue_style( 'preload-style', get_template_directory_uri() . '/css/preload.css', false,'1.1','all');
  }
  add_action( 'wp_enqueue_scripts', 'base_styles' );
+}
+
+/***************************************************************
+ * BASE THEME COLOR
+***************************************************************/
+function get_page_theme(){
+  return get_field('theme_color', get_the_id())??'green';
 }
 
 /***************************************************************

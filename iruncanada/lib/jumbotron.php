@@ -46,8 +46,7 @@ class Jumbotron {
     } // end foreach
     return $data;
   }
-//  print_r($featured['image']);
-//echo $featured['alt'];
+  
   public function generate($races){ ?>
     <header class="jumbotron">
 <?php foreach($races as $featured){

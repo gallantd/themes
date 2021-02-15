@@ -7,7 +7,12 @@
 			the_content();
 		?>
 			</article>
-<?php		endif; ?>
+<?php		endif;
+/*
+	MOVE THIS TO A TEMPLATE AND USE IT IN ALL CONTENT AREAS
+*/
+
+?>
 
 <?php
 $AllPosts = new AllRaces;
@@ -70,5 +75,5 @@ if (!empty($pagination)): ?>
     </nav>
 <?php endif; ?>
 
-<?php //if(empty($posts) && locate_template('template/no-results.php')){ include('template/no-results.php');} ?>
+<?php if(empty($posts) && locate_template('templates/no-results.php')){ include('templates/no-results.php');} ?>
 <?php get_footer(); ?>
