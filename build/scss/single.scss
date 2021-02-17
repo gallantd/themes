@@ -98,6 +98,7 @@
   }
   .active {
     border-bottom: none;
+    margin-bottom: 0;
   }
 }
 
@@ -141,16 +142,6 @@
       padding: 4rem ;
     }
   }
-  &--info {
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-      @media only screen and (min-width: 1024px) {
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-  }
   &--distances {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -169,6 +160,16 @@
     &:last-of-type{ margin-bottom: 2rem;}
     &.stripe {
         background-color: $grey-rgba;
+    }
+  }
+  .social-media {
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      @media only screen and (min-width: 1024px) {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
   .note {font-size: 1.2rem!important;}

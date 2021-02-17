@@ -52,7 +52,8 @@
       color: $white;
       text-decoration: underline;
     }
-    &.social-media:hover {
+    &.social-media:hover,
+    &.social-media:active {
       text-decoration: none;
       img {
         background-color: $color;

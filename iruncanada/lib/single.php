@@ -180,10 +180,10 @@ function out_put_section_2($data, $id){?>
         ?>
         <aside class="race--details--distances<?=$class;?>">
             <div class="race--details--info"><?= $value['distance'];?></div>
-            <div class="race--details--info"><?= $value['elevation'];?> meters</div>
+            <div class="race--details--info"><?= !empty($value['elevation'])?"{$value['elevation']} meters":'';?></div>
             <?php if(empty($value['start time'])){ $value['start time'] =  get_field('start_time', $id);}?>
             <div class="race--details--info"><?= $value['start time'];?></div>
-            <div class="race--details--info">$<?= $value['cost'];?> CAD</div>
+            <div class="race--details--info"><?= !empty($value['cost'])?"$ {$value['cost']} CAD":'';;?></div>
         </aside>
 
         <?php
