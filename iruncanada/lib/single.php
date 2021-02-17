@@ -163,6 +163,8 @@ function out_put_section_2($data, $id){?>
       <?php if(!empty($data['message'])):?>
         <div class="race--details--message"><?= $data['message'];?></a></div>
       <?php endif;?>
+        <div class="race--details--message">*Prices are subject to Change wihtout notice</a></div>
+
       <aside class="race--details--distances">
           <div class="race--details--info"><span class="mb-only">Dist:</span><span class="dsk-only">Distance:</span></div>
           <div class="race--details--info"><span class="mb-only">Elev:</span><span class="dsk-only">Elevation:</span></div>
@@ -182,8 +184,8 @@ function out_put_section_2($data, $id){?>
             <?php if(empty($value['start time'])){ $value['start time'] =  get_field('start_time', $id);}?>
             <div class="race--details--info"><?= $value['start time'];?></div>
             <div class="race--details--info">$<?= $value['cost'];?> CAD</div>
-
         </aside>
+
         <?php
         $count++;
         endforeach;?>
@@ -199,28 +201,31 @@ function out_put_section_3($data){ ?>
         <div class="race--details--info"><b>Contact us:</b> <?= $data['contact'];?></div>
       <?php endif;?>
       <?php if(!empty($data['website']['url'])):?>
-        <div class="race--details--info"><b>Web:</b> <a href="<?= $data['website']['url'];?>"><?= $data['website']['title']?? 'Race Site';?></a></div>
+        <div class="race--details--info"><b>Web:</b> <a href="<?= $data['website']['url'];?>"><?= !empty($data['website']['title'])? $data['website']['title'] :'Race Site';?></a></div>
       <?php endif;?>
       <?php if(!empty($data['register']['url'])):?>
-        <div class="race--details--info"><b>Register:</b> <a href="<?= $data['register']['url'];?>"><?= $data['register']['title']?? 'Sign up';?></a></div>
+        <div class="race--details--info"><b>Register:</b> <a href="<?= $data['register']['url'];?>"><?= !empty($data['register']['title'])?$data['register']['title'] : 'Sign up';?></a></div>
       <?php endif;?>
-
-      <?php if(!empty($data['instagram'])):?>
-        <div class="race--details--info"><a href="<?= $data['instagram'];?>">Instagram</a></div>
+      <div class="race--details--info">
+        <?php if(!empty($data['facebook'])):?>
+        <a href="<?= $data['facebook'];?>" class="social-media" target="_blank"><img
+          src="<?= get_template_directory_uri();?>/img/social/facebook.svg"
+          alt="facebook"/>
+        </a>
       <?php endif;?>
-
-
-      <?php if(!empty($data['twitter'])):?>
-        <div class="race--details--info"><a href="<?= $data['twitter'];?>">Twitter</a></div>
+        <?php if(!empty($data['instagram'])):?>
+        <a href="<?= $data['instagram'];?>" class="social-media" target="_blank"><img
+          src="<?= get_template_directory_uri();?>/img/social/instagram.svg"
+          alt="instagram" />
+        </a>
       <?php endif;?>
-
-
-      <?php if(!empty($data['facebook'])):?>
-        <div class="race--details--info"><a href="<?= $data['facebook'];?>">Facebook</a></div>
+        <?php if(!empty($data['twitter'])):?>
+        <a href="<?= $data['twitter'];?>" class="social-media" target="_blank"><img
+          src="<?= get_template_directory_uri();?>/img/social/twitter.svg"
+          alt="twitter" />
+        </a>
       <?php endif;?>
-
-
-
+    </div>
     </aside>
   </section>
 <?php

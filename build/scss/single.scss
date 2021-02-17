@@ -24,7 +24,7 @@
   &__loading {
     position: absolute;
     z-index: 1;
-    top: 30%;
+    top: 10%;
     left: 0;
     width: 100%;
     .loader {
@@ -90,7 +90,7 @@
 
   &--container {
     width: 100%;
-    min-height: 35rem;
+    min-height: 15rem;
     background-color: $grey-rgba;
     position: relative;
     border: 1px solid $white;
@@ -128,7 +128,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2.4rem;
     padding: 2.4rem;
-    min-height: 35rem;
+    min-height: 15rem;
     text-align: center;
     justify-content: center;
     @media only screen and (min-width: 768px) {
@@ -139,6 +139,16 @@
     @media only screen and (min-width: 1024px) {
       grid-gap: 4rem;
       padding: 4rem ;
+    }
+  }
+  &--info {
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      @media only screen and (min-width: 1024px) {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
   &--distances {

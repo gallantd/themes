@@ -5,6 +5,14 @@
       &:hover {
         color: $color;
       }
+      img {
+        color: $white;
+        &:hover {
+          text-decoration: none;
+          outline: none;
+
+        }
+      }
     }
   }
   .sr-pagination {
@@ -43,6 +51,13 @@
     &:hover {
       color: $white;
       text-decoration: underline;
+    }
+    &.social-media:hover {
+      text-decoration: none;
+      img {
+        background-color: $color;
+        border-radius: 4px;
+      }
     }
   }
   .post-edit-link,.irc-btn, .race-register a {
