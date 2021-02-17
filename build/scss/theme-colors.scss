@@ -81,12 +81,12 @@
       }
       &.active:hover {color: $white; cursor: default;}
     }
-    &--container {
-      border-color: $color;
-    }
     &__loading .loader{
       border-top: 1.6rem solid $color;
     }
+  }
+  .race--details-container {
+    border: 1px solid $color;
   }
 }
 

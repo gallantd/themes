@@ -37,24 +37,17 @@ if(!function_exists('single_script')) {
             get_field('sponsors');     -->
         </aside>
 
-        <div class="single--tabs"><span class="sr-only" id="tab" data-id="<?= get_the_id();?>"><?= get_the_id();?></span>
-          <button class="single--tab h3 active" data-section="section_1" id="tab-1">Date</button>
-          <button class="single--tab h3" data-section="section_2">Distance</button>
-          <button class="single--tab h3" data-section="section_3">Contact</button>
-        </div>
-
-
-        <div class="single--container">
-          <aside class="single--section" id="section-post">
-          </aside>
-        </div>
-        <!-- <aside class="single--sites">
-          get_field('website');
-          get_field('register');
-          <button class="single--tab h3" id="section-3">Register</button>
-          <button class="single--tab h3" id="section-3">Website</button>
-        </aside> -->
-
+        <article class="race--details-container">
+          <div class="single--tabs"><span class="sr-only" id="tab" data-id="<?= get_the_id();?>"><?= get_the_id();?></span>
+            <button class="single--tab h3 active" data-section="section_1" id="tab-1">Date</button>
+            <button class="single--tab h3" data-section="section_2">Distance</button>
+            <button class="single--tab h3" data-section="section_3">Contact</button>
+          </div>
+          <div class="single--container">
+            <aside class="single--section" id="section-post">
+            </aside>
+          </div>
+        </article>
     </article>
     <?php echo do_shortcode( '[addtoany]' );?>
     <?php edit_post_link(); ?>

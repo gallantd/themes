@@ -21,6 +21,9 @@
       }
     }
   }
+  &--section {
+    padding-bottom: 2rem;
+  }
   &__loading {
     position: absolute;
     z-index: 1;
@@ -66,22 +69,21 @@
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     text-align: center;
-    margin-top: 5rem;
-    @media screen and (min-width: 728px){
-      margin-top: 6.5rem;
-    }
-    @media screen and (min-width: 1024px){
-      margin-top: 8rem;
-    }
-
   }
   &--tab {
-    width: auto;
     color: $white;
-    border: 1px solid $white;
+    outline: none;
+    width: 100%;
+    display: block;
+    border: 1px solid $white;;
+    border-left: none;
+    border-top: none;
     padding: 2rem;
     text-transform: uppercase;
     cursor: pointer;
+    &:last-of-type {
+      border-right: none;
+    }
     &.active {
       border-bottom: none;
       background-color: $grey-rgba;
@@ -93,11 +95,8 @@
     min-height: 15rem;
     background-color: $grey-rgba;
     position: relative;
-    border: 1px solid $white;
-    border-top: none;
   }
   .active {
-    border-bottom: none;
     margin-bottom: 0;
   }
 }
@@ -114,6 +113,15 @@
 
 .race--details {
   position: relative;
+  &-container {
+    margin-top: 5rem;
+    @media screen and (min-width: 728px){
+      margin-top: 6.5rem;
+    }
+    @media screen and (min-width: 1024px){
+      margin-top: 8rem;
+    }
+  }
   &--message {
     padding: 2.4rem;
     text-align: center;
@@ -157,7 +165,6 @@
       grid-gap: 4rem;
       padding: 1rem ;
     }
-    &:last-of-type{ margin-bottom: 2rem;}
     &.stripe {
         background-color: $grey-rgba;
     }
