@@ -81,17 +81,32 @@ class AllRaces
 
     private function runSearchQuery()
     {
-
         $this->paged = filter_input(INPUT_GET, 'paged', FILTER_SANITIZE_STRING);
-
         $this->wpQuery = new WP_Query(array(
-            'post_type' => $this->type,
-            'paged'  => $this->paged,
-            'post_status' => 'publish',
-            'posts_per_page' => $this->postsPerPage
-          )
-        );
-        return $this->wpQuery->posts;
+          'post_type' => $this->type,
+          'paged'  => $this->paged,
+          'posts_per_page' => $this->postsPerPage,
+          'post_status' => 'publish',
+          'meta_key' => 'event_date',
+          'meta_query' => array(
+              'relation' => "AND",
+              array(
+                  'key'     => 'event_date',
+                  'value'   => date('Ymd'),
+                  'compare' => '>=',
+                  'type' => 'DATE'
+              ),
+              array(
+                  'key'     => 'event_date',
+                  'value'   => '',
+                  'compare' => '!=',
+              )
+          ),
+          'orderby' => 'event_date',
+          'order' => 'ASC'
+        )
+      );
+       return $this->wpQuery->posts;
     }
 
 

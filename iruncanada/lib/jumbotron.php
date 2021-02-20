@@ -23,6 +23,16 @@ class Jumbotron {
           'key' => 'is_cancelled',
           'value' => '1',
           'compare' => '!='
+        ),array(
+        ),array(
+          'key' => 'sold_out',
+          'value' => '1',
+          'compare' => '!='
+        ),array(
+          'key'     => 'event_date',
+          'value'   => date('Ymd'),
+          'compare' => '>=',
+          'type' => 'DATE'
         )
       )
     ));
@@ -46,7 +56,7 @@ class Jumbotron {
     } // end foreach
     return $data;
   }
-  
+
   public function generate($races){ ?>
     <header class="jumbotron">
 <?php foreach($races as $featured){

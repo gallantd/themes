@@ -113,15 +113,6 @@
 
 .race--details {
   position: relative;
-  &-container {
-    margin-top: 5rem;
-    @media screen and (min-width: 728px){
-      margin-top: 6.5rem;
-    }
-    @media screen and (min-width: 1024px){
-      margin-top: 8rem;
-    }
-  }
   &--message {
     padding: 2.4rem;
     text-align: center;
@@ -190,4 +181,58 @@
   text-transform: uppercase;
   font-weight: bold;
   a { padding: 2rem 4rem!important;}
+}
+
+.single--main-sponsor {
+  padding: 1rem;
+  max-width: 60rem;
+  height: auto;
+  text-align: center;
+  margin: 2.4rem auto;
+  @media screen and (min-width: 768px){
+    margin: 3.2rem auto;
+  }
+  @media screen and (min-width: 768px){
+    margin: 4rem auto;
+  }
+  background-color: rgba(205,205,205,0.3);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      background-color: rgba(205,205,205,0.4);
+    }
+}
+
+.single--secondary {
+  &-sponsors {
+    padding: 1rem;
+    height: auto;
+    text-align: center;
+    margin: 2.4rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 768px){
+      margin: 3.2rem auto;
+    }
+    @media screen and (min-width: 768px){
+      margin: 4rem auto;
+    }
+  }
+  &-container {
+   flex-basis: 8rem;
+   padding: 1rem;
+    img {
+      width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }

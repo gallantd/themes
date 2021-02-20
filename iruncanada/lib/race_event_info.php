@@ -57,7 +57,7 @@ if(!function_exists('get_schedule')){
     if(get_field('date_scheduled', $id) && get_field('event_date', $id)){
         $data = date("M d Y",strtotime(get_field('event_date', $id)));
     } else {
-      $data = 'coming soon';
+      $data = 'Not scheduled';
     }
     return $data;
   }

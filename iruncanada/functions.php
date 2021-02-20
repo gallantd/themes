@@ -13,6 +13,8 @@ require_once locate_template("lib/AdvancedSearch.php");
 require_once locate_template("lib/race_event_info.php");
 require_once locate_template("lib/all-races.php");
 require_once locate_template("lib/single.php");
+require_once locate_template("lib/faqs.php");
+require_once locate_template("lib/sponsors.php");
 
 /***************************************************************
  * BASE STYLES AND SCRIPT INCLUDE

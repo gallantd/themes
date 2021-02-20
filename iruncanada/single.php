@@ -30,25 +30,31 @@ if(!function_exists('single_script')) {
       <aside class="single--race-post section-1">
         <?php the_content(); ?>
       </aside>
-        <aside class="single--sponsors">
-            <!-- get_field('sponsor_name');
-            get_field('add_sponsor');
-            get_field('sponsor_image');
-            get_field('sponsors');     -->
-        </aside>
 
-        <article class="race--details-container">
-          <div class="single--tabs"><span class="sr-only" id="tab" data-id="<?= get_the_id();?>"><?= get_the_id();?></span>
-            <button class="single--tab h3 active" data-section="section_1" id="tab-1">Date</button>
-            <button class="single--tab h3" data-section="section_2">Distance</button>
-            <button class="single--tab h3" data-section="section_3">Contact</button>
-          </div>
-          <div class="single--container">
-            <aside class="single--section" id="section-post">
-            </aside>
-          </div>
-        </article>
+      <aside class="single--main-sponsor">
+        <?php sponsor(get_field('sponsor')); ?>
+      </aside>
+
+      <article class="race--details-container">
+        <div class="single--tabs"><span class="sr-only" id="tab" data-id="<?= get_the_id();?>"><?= get_the_id();?></span>
+          <button class="single--tab h3 active" data-section="section_1" id="tab-1">Date</button>
+          <button class="single--tab h3" data-section="section_2">Distance</button>
+          <button class="single--tab h3" data-section="section_3">Contact</button>
+        </div>
+        <div class="single--container">
+          <aside class="single--section" id="section-post">
+          </aside>
+        </div>
+      </article>
     </article>
+    <?php if(get_field('additional_sponsors')):?>
+    <aside class="single--secondary-sponsors">
+        <?php sponsor(get_field('additional_sponsors')); ?>
+    </aside>
+  <?php endif; ?>
+
+
+
     <?php echo do_shortcode( '[addtoany]' );?>
     <?php edit_post_link(); ?>
     </section>
