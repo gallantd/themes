@@ -1,0 +1,50 @@
+.simple {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 20rem repeat(2, 10.5rem) 6rem repeat(15, 4rem);
+  overflow-x: auto;
+  &--field {
+    padding: 2rem 0;
+    text-align: center;
+    &.left {
+      text-align: left;
+    }
+    &.stripe {
+
+    //  background-color: $grey-rgba;
+    }
+  }
+  a.green:hover {transform: scale(1.2);}
+  a.white-text:hover {color: $green;}
+  .green, .red, .yellow {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    border-radius: 1rem;
+    background-color: $green;
+    text-align: center;
+    &-text {
+      color: $green;
+    }
+  }
+  .red {
+    background-color: $red;
+    &-text {
+      color: $red;
+    }
+  }
+  .yellow {
+    background-color: $yellow;
+    &-text {
+      color: $yellow;
+    }
+  }
+  .white {
+    background-color: $white;
+    &-text {
+      color: $white;
+    }
+  }
+}

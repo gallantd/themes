@@ -8,13 +8,7 @@
 		?>
 			</article>
 <?php		endif;
-/*
-	MOVE THIS TO A TEMPLATE AND USE IT IN ALL CONTENT AREAS
-*/
 
-?>
-
-<?php
 $AllPosts = new AllRaces;
 
 if(filter_input(INPUT_GET, 'province', FILTER_SANITIZE_STRING)){

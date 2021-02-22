@@ -44,9 +44,18 @@ class AllRaces
         $this->filterValue = $val;
     }
 
-    public function posts()
+    public function posts($count = 10)
     {
+        $this->setPostPerPage($count);
+
         return $this->runSearchQuery();
+    }
+
+    public function all_posts($count = -1)
+    {
+        $this->setPostPerPage($count);
+
+        return $this->runSimpleSearchQuery();
     }
 
     public function filters()
@@ -77,6 +86,21 @@ class AllRaces
         )
       );
         return $this->wpQuery->posts;
+    }
+
+    private function runSimpleSearchQuery()
+    {
+      $this->paged = filter_input(INPUT_GET, 'paged', FILTER_SANITIZE_STRING);
+      $this->wpQuery = new WP_Query(array(
+        'post_type' => $this->type,
+        'paged'  => $this->paged,
+        'posts_per_page' => $this->postsPerPage,
+        'post_status' => 'any',
+        'orderby' => 'modified',
+        'order' => 'ASC'
+      )
+    );
+     return $this->wpQuery->posts;
     }
 
     private function runSearchQuery()
