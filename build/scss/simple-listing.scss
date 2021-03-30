@@ -5,15 +5,12 @@
   align-items: center;
   grid-template-columns: 20rem repeat(2, 10.5rem) 6rem repeat(15, 4rem);
   overflow-x: auto;
+  border-bottom: 1px solid $green;
   &--field {
     padding: 2rem 0;
     text-align: center;
     &.left {
       text-align: left;
-    }
-    &.stripe {
-
-    //  background-color: $grey-rgba;
     }
   }
   a.green:hover {transform: scale(1.2);}
@@ -46,5 +43,23 @@
     &-text {
       color: $white;
     }
+  }
+}
+.stripe {
+background-color: $grey-rgba;
+}
+
+a.new-post {
+  background-color: #368F8B;
+  color: #f1f3f4;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.4rem;
+  &:hover {
+    color: $dark;
+    background-color: $grey;
   }
 }

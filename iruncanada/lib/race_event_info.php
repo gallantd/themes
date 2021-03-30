@@ -106,7 +106,7 @@ if(!function_exists('check_isset')) {
     if(!empty($val)){
         switch ($val){
           case ($val === 'draft' || $val === 'pending'):
-          $span = '<span class="yellow"></span>';
+            $span = '<span class="yellow"></span>';
           break;
           default:
           if($link){

@@ -96,7 +96,7 @@ class AllRaces
         'paged'  => $this->paged,
         'posts_per_page' => $this->postsPerPage,
         'post_status' => 'any',
-        'orderby' => 'modified',
+        'orderby' => 'title',
         'order' => 'ASC'
       )
     );

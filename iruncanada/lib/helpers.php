@@ -42,7 +42,8 @@ function output_pictures($image, $class = ''){
 
 function get_image_sizes($id , $featured =''){
 	if(empty($id)){return false;}
-		if(has_post_thumbnail($id) || $featured){
+
+	if(has_post_thumbnail($id) || $featured){
 			$image = [
 				'1440' => get_the_post_thumbnail_url($id, 'Large-Crop'),
 				'1024' => get_the_post_thumbnail_url($id, 'Medium-Crop'),
